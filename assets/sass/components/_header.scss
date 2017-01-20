@@ -1,0 +1,95 @@
+
+
+/*
+
+
+#header-custom {
+	background-color: 	$color-one;
+	border-top: $color-two solid 3px;
+	border-bottom: $color-two solid 3px;
+
+	#menu-custom {
+		padding-top: 40px;
+	}
+
+		.logo-custom {
+			font-size: 60px;
+			font-weight: bold;
+			color: $color-two;
+			padding: 5px;
+			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			transition: background 0.3s linear 0s, color 0.3s linear 0s;
+		}
+
+			.logo-custom:hover {
+			color: $color-three;
+		}
+
+		.menu_button_custom {
+			color: $color-one;
+			background: $color-two;
+			font-size: 14px;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 7px 10px;
+			margin-right: 1px;
+			border-radius: 5px;
+			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			transition: background 0.3s linear 0s, color 0.3s linear 0s;			
+		}
+					
+					
+			.menu_button_custom:hover {
+				background: $color-three;
+				color: $color-one;
+			}
+
+		.form-outline-custom {
+			border: $color-two 2px solid;
+			background-color: transparent;
+			width: 170px;
+	
+		
+				&:hover {
+					border-color: $color-three;
+				}
+		
+				&:focus {
+					border-color: $color-two;
+				}
+		}
+
+
+} */
+
+
+.logo_custom {
+	font-size: 40px;
+	-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+	-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+	transition: background 0.3s linear 0s, color 0.3s linear 0s;
+}
+
+		.menu_button_custom {
+			color: $color-one;
+			background: $color-two;
+			font-size: 14px;
+			font-weight: bold;
+			text-decoration: none;
+			padding: 7px 10px;
+			margin-right: 1px;
+			border-radius: 5px;
+			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			transition: background 0.3s linear 0s, color 0.3s linear 0s;			
+		}
+					
+					
+			.menu_button_custom:hover {
+				background: $color-three;
+				color: $color-one;
+			}
+
+
