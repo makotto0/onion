@@ -1,95 +1,84 @@
+#header_custom_main {
+	background-color: $color-gray;
 
-
-/*
-
-
-#header-custom {
-	background-color: 	$color-one;
-	border-top: $color-two solid 3px;
-	border-bottom: $color-two solid 3px;
-
-	#menu-custom {
-		padding-top: 40px;
-	}
-
-		.logo-custom {
+		.logo_custom {
 			font-size: 60px;
 			font-weight: bold;
-			color: $color-two;
-			padding: 5px;
+			color: $color-black;
+			text-decoration: none;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			transition: background 0.3s linear 0s, color 0.3s linear 0s;
 		}
 
-			.logo-custom:hover {
-			color: $color-three;
-		}
-
-		.menu_button_custom {
-			color: $color-one;
-			background: $color-two;
-			font-size: 14px;
-			font-weight: bold;
-			text-decoration: none;
-			padding: 7px 10px;
-			margin-right: 1px;
-			border-radius: 5px;
-			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			transition: background 0.3s linear 0s, color 0.3s linear 0s;			
-		}
-					
-					
-			.menu_button_custom:hover {
-				background: $color-three;
-				color: $color-one;
+			.logo_custom:hover {
+				color: $color-white;
 			}
 
-		.form-outline-custom {
-			border: $color-two 2px solid;
-			background-color: transparent;
-			width: 170px;
-	
+
+		.header_custom_right {
+			padding-top: 30px;
+			margin: 0px;
+
 		
-				&:hover {
-					border-color: $color-three;
-				}
-		
-				&:focus {
-					border-color: $color-two;
+
+			.menu_button_custom {
+				color: $color-gray;
+				background: $color-black;
+				font-family: $font-secondary;
+				font-size: 14px;
+				font-weight: bold;
+				text-decoration: none;
+				padding: 7px 20px;
+				margin-right: 3px;
+				border-radius: 5px;
+				-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+				-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+				transition: background 0.3s linear 0s, color 0.3s linear 0s;
+			
+			}
+					
+					
+				.menu_button_custom:hover {
+					background: $color-white;
+					color: $color-gray;
 				}
 		}
 
 
-} */
+			
+		.search_custom {
 
+			padding-top: 22px;
+			padding-left: 0;
+			margin: 0;	
+		
+			.form-outline {
+				input[type="text"], input[type="search"], input[type=search]{
+					width: 178px;
+					border: $color-black 2px solid;
+					background-color: transparent;
+					color: $color-black;
+			
+					&:hover {
+						border-color: $color-black;
+					}
+			
+					&:focus {
+						border-color: $color-black;
+					}
+				}
+			}
+		}
+		
 
-.logo_custom {
-	font-size: 40px;
-	-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-	-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-	transition: background 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-		.menu_button_custom {
-			color: $color-one;
-			background: $color-two;
-			font-size: 14px;
-			font-weight: bold;
-			text-decoration: none;
-			padding: 7px 10px;
-			margin-right: 1px;
-			border-radius: 5px;
-			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			transition: background 0.3s linear 0s, color 0.3s linear 0s;			
-		}
-					
-					
-			.menu_button_custom:hover {
-				background: $color-three;
-				color: $color-one;
-			}
 
+
+
+
+		
+		
+		 
 
