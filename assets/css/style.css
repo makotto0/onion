@@ -5820,84 +5820,26 @@ body {
   font-family: "Monoton", cursive;
   background-color: #333; }
 
-li {
-  display: inline-block; }
-
-a {
-  text-decoration: none; }
-
-#header_custom_main {
-  background-color: #a3a1a1; }
-  #header_custom_main .logo_custom {
-    font-size: 60px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-    -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-    transition: background 0.3s linear 0s, color 0.3s linear 0s; }
-  #header_custom_main .logo_custom:hover {
-    color: #FFF; }
-  #header_custom_main .header_custom_right {
-    padding-top: 30px;
-    margin: 0px; }
-    #header_custom_main .header_custom_right .menu_button_custom {
-      color: #a3a1a1;
-      background: #333;
-      font-family: "Monoton", cursive;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 7px 20px;
-      margin-right: 3px;
-      border-radius: 5px;
-      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      transition: background 0.3s linear 0s, color 0.3s linear 0s; }
-    #header_custom_main .header_custom_right .menu_button_custom:hover {
-      background: #FFF;
-      color: #a3a1a1; }
-  #header_custom_main .search_custom {
-    padding-top: 22px;
-    padding-left: 0;
-    margin: 0; }
-    #header_custom_main .search_custom .form-outline input[type="text"], #header_custom_main .search_custom .form-outline input[type="search"], #header_custom_main .search_custom .form-outline input[type=search] {
-      width: 178px;
-      border: #333 2px solid;
-      background-color: transparent;
-      color: #333; }
-      #header_custom_main .search_custom .form-outline input[type="text"]:hover, #header_custom_main .search_custom .form-outline input[type="search"]:hover, #header_custom_main .search_custom .form-outline input[type=search]:hover {
-        border-color: #333; }
-      #header_custom_main .search_custom .form-outline input[type="text"]:focus, #header_custom_main .search_custom .form-outline input[type="search"]:focus, #header_custom_main .search_custom .form-outline input[type=search]:focus {
-        border-color: #333; }
-
-@media screen and (max-width: 767px) {
-  .logo_custom {
-    display: block;
-    padding-top: 11px !important;
-    font-size: 20px !important; }
-
-  .menu_button_custom {
-    display: inline-block;
-    padding: 4px !important; } }
-@media screen and (max-width: 1024px) {
-  .logo_custom {
-    padding-top: 11px !important;
-    font-size: 40px !important; }
-
-  .header_custom_right {
-    padding-top: 12px !important; }
-    .header_custom_right .menu_button_custom {
-      padding: 4px !important; }
-
-  .search_custom {
-    padding-top: 5px !important; }
-
-  .form-outline input[type="text"], .form-outline input[type="search"], .form-outline input[type=search] {
-    width: 110px !important;
-    height: 27px !important; } }
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .form-outline input[type="text"], .form-outline input[type="search"], .form-outline input[type=search] {
-    width: 140px !important; } }
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Portrait Phones */
+/* Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops */
+/* Medium Devices, Landscape Tablets, Laptops, Desktops */
+/* Large Devices, Large Desktops, Wide Screens */
+/*==========  Non-Mobile First Method. Opposite of the above ==========*/
+/* Large Devices, Large Desktops, Wide Screens */
+/* Medium Devices, Landscape Tablets, Laptops, Desktops */
+/* Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops */
+/* Extra Small Devices, Portrait Phones */
+/* Custom, iPhone Retina */
+/*==========  Combined Mobile and Non-Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Portrait Phones */
+/* Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops */
+/* Medium Devices, Landscape Tablets, Laptops, Desktops */
+/* Large Devices, Large Desktops, Wide Screens */
 
 /*# sourceMappingURL=style.css.map */
