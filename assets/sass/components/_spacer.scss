@@ -1,0 +1,42 @@
+/*====================================================================
+===================== SPACER CUSTOM ==================================
+====================================================================*/
+
+/*========================================
+=   Classes used in HTML :               =
+=                                        =
+=   <div class="spacer"></div>           =     
+=   <div class="spacer-small"></div>     = 
+=   <div class="spacer-large"></div>     = 
+=   <div class="spacer-xl"></div>        = 
+========================================*/ 
+
+
+.spacer{
+	padding-bottom: 30px;
+
+	&-small{
+		padding-bottom: 15px;
+
+		@include respond-to(mobile){
+			padding-bottom: 5px;
+		}
+	}
+
+	&-large{
+		padding-bottom: 60px;
+
+		@include respond-to(mobile){
+			padding-bottom: 30px;
+		}
+	}
+
+	&-xl{
+		padding-bottom: 80px;
+
+		@include respond-to(mobile){
+			padding-bottom: 50px;
+		}
+	}
+}
+

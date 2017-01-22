@@ -1,0 +1,146 @@
+/*====================================================================
+===================== SLIDESHOW CUSTOM ===============================
+====================================================================*/
+
+
+/*==================================================
+=               Slideshow container                =
+==================================================*/ 
+
+
+.slideshow_con_custom {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+
+
+     /*==================================================
+     =               Slideshow img filter               =
+     ==================================================*/ 
+
+
+     .slideshow_img_custom {
+          -webkit-filter: invert(.8);
+          filter: invert(.8);  
+     }
+
+
+     /*==================================================
+     =                Previous button                   =
+     ==================================================*/ 
+
+
+     .prev_custom {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: $color-gray;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+     }
+
+
+          /*======================================================================
+          = On hover, add a black background color with a little bit see-through =
+          ======================================================================*/      
+
+
+          .prev_custom:hover {
+               background-color: rgba(0,0,0,0.8);
+          }
+
+
+    /*==================================================
+     =                 Next button                     =
+     ==================================================*/          
+
+
+     .next_custom {
+          @extend .prev_custom;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+     }
+
+
+         /*======================================================================
+          = On hover, add a black background color with a little bit see-through =
+          ======================================================================*/      
+
+
+          .next_custom:hover {
+               background-color: rgba(0,0,0,0.8);
+          }
+
+
+    /*==================================================
+     =                 Caption text                    =
+     ==================================================*/
+
+
+     .text_custom {
+          color: $color-gray;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+     }
+
+
+    /*==================================================
+     =          The dots/bullets/indicators            =
+     ==================================================*/
+
+
+     .dot {
+          cursor:pointer;
+          height: 13px;
+          width: 13px;
+          margin: 0 2px;
+          background-color: white;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+     }
+     
+          .active, .dot:hover {
+               background-color: #717171;
+          }
+
+
+
+     /*==================================================
+     =                Fading animation                  =
+     ==================================================*/
+
+
+     .fade_custom {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+     }
+     
+     @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+     }
+     
+     @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+     }
+
+
+}
+
+
+/*==================================================
+=       End of Slideshow container                =
+==================================================*/ 

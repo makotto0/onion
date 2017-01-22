@@ -5808,10 +5808,15 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/* =========================================
-========= FONTS ==========================*/
-/* =========================================
-========= COLORS =========================*/
+/*====================================================================
+=========================== VARIABLES ================================
+====================================================================*/
+/*==================================================
+=           FONTS                                  =
+==================================================*/
+/*==================================================
+=           COLORS                                 =
+==================================================*/
 /* Gray */
 /* Black*/
 /* White */
@@ -5820,6 +5825,12 @@ button.close {
 body {
   font-family: "Russo One", sans-serif;
   background-color: #333; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
 
 /*====================================================================
 ============ Bootstrap 3 Media Queries ===============================
@@ -5850,10 +5861,8 @@ body {
       font-size: 16px;
       font-family: "Russo One", sans-serif;
       padding: 4.5px 10px;
-      margin: 13px 10px 0 0;
-      border-radius: 5px; }
-    .nav_custom .navbar_xs_custom {
-      margin: 0 0 0 7px; } }
+      margin: 13px 0 0 10px;
+      border-radius: 5px; } }
 /*==================================================
 =       Extra Small Devices, Portrait Phones       =
 ==================================================*/
@@ -5872,7 +5881,7 @@ body {
       background-color: #333;
       font-size: 16px;
       padding: 4.5px 10px;
-      margin: 13px 10px 0 0;
+      margin: 13px 0 0 10px;
       border-radius: 5px; } }
 /*=================================================================================
 = Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
@@ -5892,7 +5901,7 @@ body {
       background-color: #333;
       font-size: 16px;
       padding: 4.5px 10px;
-      margin: 13px 10px 0 0;
+      margin: 13px 0 0 10px;
       border-radius: 5px; } }
 /*======================================================
 = Medium Devices, Landscape Tablets, Laptops, Desktops =
@@ -5917,7 +5926,7 @@ body {
       background-color: #333;
       font-size: 16px;
       padding: 4.5px 10px;
-      margin: 13px 10px 0 0;
+      margin: 13px 0 0 10px;
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -5947,10 +5956,131 @@ body {
       font-size: 18px;
       font-family: "Russo One", sans-serif;
       padding: 6px 12px;
-      margin: 13px 10px 0 0;
+      margin: 13px 0 0 10px;
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       transition: background 0.3s linear 0s, color 0.3s linear 0s; } }
+/*====================================================================
+===================== SLIDESHOW CUSTOM ===============================
+====================================================================*/
+/*==================================================
+=               Slideshow container                =
+==================================================*/
+.slideshow_con_custom {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  /*==================================================
+  =               Slideshow img filter               =
+  ==================================================*/
+  /*==================================================
+  =                Previous button                   =
+  ==================================================*/
+  /*======================================================================
+  = On hover, add a black background color with a little bit see-through =
+  ======================================================================*/
+  /*==================================================
+   =                 Next button                     =
+   ==================================================*/
+  /*======================================================================
+   = On hover, add a black background color with a little bit see-through =
+   ======================================================================*/
+  /*==================================================
+   =                 Caption text                    =
+   ==================================================*/
+  /*==================================================
+   =          The dots/bullets/indicators            =
+   ==================================================*/
+  /*==================================================
+  =                Fading animation                  =
+  ==================================================*/ }
+  .slideshow_con_custom .slideshow_img_custom {
+    -webkit-filter: invert(0.8);
+    filter: invert(0.8); }
+  .slideshow_con_custom .prev_custom, .slideshow_con_custom .next_custom {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #a3a1a1;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; }
+  .slideshow_con_custom .prev_custom:hover, .slideshow_con_custom .next_custom:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .slideshow_con_custom .next_custom {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  .slideshow_con_custom .next_custom:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .slideshow_con_custom .text_custom {
+    color: #a3a1a1;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center; }
+  .slideshow_con_custom .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  .slideshow_con_custom .active, .slideshow_con_custom .dot:hover {
+    background-color: #717171; }
+  .slideshow_con_custom .fade_custom {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+/*==================================================
+=       End of Slideshow container                =
+==================================================*/
+/*====================================================================
+===================== SPACER CUSTOM ==================================
+====================================================================*/
+/*========================================
+=   Classes used in HTML :               =
+=                                        =
+=   <div class="spacer"></div>           =     
+=   <div class="spacer-small"></div>     = 
+=   <div class="spacer-large"></div>     = 
+=   <div class="spacer-xl"></div>        = 
+========================================*/
+.spacer {
+  padding-bottom: 30px; }
+  .spacer-small {
+    padding-bottom: 15px; }
+    @media screen and (max-width: 767px) {
+      .spacer-small {
+        padding-bottom: 5px; } }
+  .spacer-large {
+    padding-bottom: 60px; }
+    @media screen and (max-width: 767px) {
+      .spacer-large {
+        padding-bottom: 30px; } }
+  .spacer-xl {
+    padding-bottom: 80px; }
+    @media screen and (max-width: 767px) {
+      .spacer-xl {
+        padding-bottom: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
