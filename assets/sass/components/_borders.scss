@@ -1,0 +1,14 @@
+.border_right_custom {
+  border-right: $color-gray solid 2px;
+}
+
+.border_bottom_custom {
+  border-bottom: $color-gray solid 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.border_left_custom {
+  border-left: $color-gray solid 2px;
+  padding-left: 10px;
+}

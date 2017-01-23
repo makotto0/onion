@@ -1,0 +1,16 @@
+.regular_button_custom {
+      color: $color-black;
+      background-color: $color-blue;
+      font-size: 18px;
+      font-family: $font-primary;
+      padding: 6px 12px;
+      border-radius: 5px;
+      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+      transition: background 0.3s linear 0s, color 0.3s linear 0s;
+}
+
+.regular_button_custom:hover {
+      color: $color-black;
+      background-color: $color-gray;
+}

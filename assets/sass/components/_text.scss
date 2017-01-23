@@ -1,0 +1,15 @@
+.white_text_custom {
+      color: $color-white;
+}
+
+.blue_text_custom {
+      color: $color-blue;
+}
+
+.green_text_custom {
+      color: $color-green;
+}
+
+.gray_text_custom {
+      color: lighten($color-gray, 5%);
+}

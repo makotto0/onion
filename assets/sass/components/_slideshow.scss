@@ -1,146 +1,529 @@
 /*====================================================================
-===================== SLIDESHOW CUSTOM ===============================
+============ Bootstrap 3 Media Queries for SLIDESHOW =================
 ====================================================================*/
 
 
 /*==================================================
-=               Slideshow container                =
-==================================================*/ 
+============== Mobile First Method =================
+=              Custom, iPhone Retina
+==================================================*/
 
 
-.slideshow_con_custom {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
+
+@media only screen and (min-width : 320px) {
+	.slideshow_con_custom {
+		  max-width: 100%;
+		  position: relative;
+		  margin: auto;
 
 
-     /*==================================================
-     =               Slideshow img filter               =
-     ==================================================*/ 
+		  .prev_custom {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: $color-black;
+				font-weight: bold;
+				font-size: 25px;
+				border-radius: 0 5px 5px 0;
+		  }
+
+		  .next_custom {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: $color-black;
+				font-weight: bold;
+				font-size: 25px;
+				border-radius: 0 5px 5px 0;
+		  }
 
 
-     .slideshow_img_custom {
-          -webkit-filter: invert(.8);
-          filter: invert(.8);  
-     }
+		  .text_custom {
+				color: $color-black;
+				font-size: 18px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 8px;
+				width: 100%;
+				text-align: center;
+		  }
 
 
-     /*==================================================
-     =                Previous button                   =
-     ==================================================*/ 
+		  .fade_custom {
+				-webkit-animation-name: fade;
+				-webkit-animation-duration: 1.5s;
+				animation-name: fade;
+				animation-duration: 1.5s;
+		  }
 
+		  @-webkit-keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+		  }
 
-     .prev_custom {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          margin-top: -22px;
-          padding: 16px;
-          color: $color-gray;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-     }
-
-
-          /*======================================================================
-          = On hover, add a black background color with a little bit see-through =
-          ======================================================================*/      
-
-
-          .prev_custom:hover {
-               background-color: rgba(0,0,0,0.8);
+		  @keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
           }
 
-
-    /*==================================================
-     =                 Next button                     =
-     ==================================================*/          
-
-
-     .next_custom {
-          @extend .prev_custom;
-          right: 0;
-          border-radius: 3px 0 0 3px;
-     }
+		  .slideshow_img_custom {
+				border-radius: 7px;
+				-webkit-filter: invert(.8);
+				filter: invert(.8);
+		  }
+	}
 
 
-         /*======================================================================
-          = On hover, add a black background color with a little bit see-through =
-          ======================================================================*/      
+	.dot_con_custom {
+		  text-align: center;
+
+		  .dot {
+				cursor:pointer;
+				height: 13px;
+				width: 13px;
+				margin: 0 2px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+		  }
+
+				.active, .dot:hover {
+					  background-color: #717171;
+				}
+
+	}
+}
 
 
-          .next_custom:hover {
-               background-color: rgba(0,0,0,0.8);
-          }
+/*==================================================
+=       Extra Small Devices, Portrait Phones       =
+==================================================*/
 
 
-    /*==================================================
-     =                 Caption text                    =
-     ==================================================*/
+@media only screen and (min-width : 480px) {
+	.slideshow_con_custom {
+          max-width: 100%;
+	      position: relative;
+	      margin: auto;
 
 
-     .text_custom {
-          color: $color-gray;
-          font-size: 15px;
-          padding: 8px 12px;
-          position: absolute;
-          bottom: 8px;
-          width: 100%;
+	      .prev_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+	            font-size: 30px;
+	            border-radius: 0 5px 5px 0;
+	      }
+
+	      .next_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            right: 0;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+	            font-size: 30px;
+	            border-radius: 0 5px 5px 0;
+	      }
+
+	      .text_custom {
+	            color: $color-black;
+	            font-size: 20px;
+	            padding: 8px 12px;
+	            position: absolute;
+	            bottom: 8px;
+	            width: 100%;
+	            text-align: center;
+	      }
+
+
+          .fade_custom {
+	            -webkit-animation-name: fade;
+	            -webkit-animation-duration: 1.5s;
+	            animation-name: fade;
+	            animation-duration: 1.5s;
+	      }
+
+	      @-webkit-keyframes fade {
+	            from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      @keyframes fade {
+                from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      .slideshow_img_custom {
+	            border-radius: 7px;
+	            -webkit-filter: invert(.8);
+	            filter: invert(.8);
+	      }
+    }
+
+
+    .dot_con_custom {
+	      text-align: center;
+
+	      .dot {
+	            cursor:pointer;
+	            height: 13px;
+	            width: 13px;
+	            margin: 0 2px;
+	            background-color: #bbb;
+	            border-radius: 50%;
+	            display: inline-block;
+	            transition: background-color 0.6s ease;
+	      }
+
+	      .active, .dot:hover {
+	            background-color: #717171;
+	      }
+    }
+}
+
+
+/*=================================================================================
+= Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
+=================================================================================*/
+
+
+@media only screen and (min-width : 768px) {
+    .slideshow_con_custom {
+	      max-width: 100%;
+	      position: relative;
+	      margin: auto;
+
+
+	      .prev_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+	            font-size: 50px;
+                transition: 0.6s ease;
+	            border-radius: 0 5px 5px 0;
+	      }
+
+                .prev_custom:hover {
+	                  background-color: lighten($color-black, 5%);
+	            }
+
+	      .next_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            right: 0;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+                font-size: 50px;
+	            transition: 0.6s ease;
+	            border-radius: 0 5px 5px 0;
+	      }
+
+	            .next_custom:hover {
+	                  background-color: lighten($color-black, 5%);
+	            }
+
+	      .text_custom {
+	            color: $color-black;
+	            font-size: 30px;
+	            padding: 8px 12px;
+	            position: absolute;
+	            bottom: 8px;
+	            width: 100%;
+	            text-align: center;
+	      }
+
+
+	      .fade_custom {
+	            -webkit-animation-name: fade;
+	            -webkit-animation-duration: 1.5s;
+	            animation-name: fade;
+	            animation-duration: 1.5s;
+	      }
+
+	      @-webkit-keyframes fade {
+	            from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      @keyframes fade {
+	            from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      .slideshow_img_custom {
+	            border-radius: 7px;
+	            -webkit-filter: invert(.8);
+	            filter: invert(.8);
+	      }
+    }
+
+
+    .dot_con_custom {
           text-align: center;
-     }
+
+	      .dot {
+	            cursor:pointer;
+	            height: 13px;
+	            width: 13px;
+	            margin: 0 2px;
+	            background-color: #bbb;
+	            border-radius: 50%;
+	            display: inline-block;
+	            transition: background-color 0.6s ease;
+	      }
+
+	      .active, .dot:hover {
+	            background-color: #717171;
+	      }
+    }
+
+}
 
 
-    /*==================================================
-     =          The dots/bullets/indicators            =
-     ==================================================*/
+/*======================================================
+= Medium Devices, Landscape Tablets, Laptops, Desktops =
+======================================================*/
 
 
-     .dot {
-          cursor:pointer;
-          height: 13px;
-          width: 13px;
-          margin: 0 2px;
-          background-color: white;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-     }
-     
-          .active, .dot:hover {
-               background-color: #717171;
-          }
+@media only screen and (min-width : 992px) {
+
+    .slideshow_con_custom {
+	      max-width: 100%;
+	      position: relative;
+	      margin: auto;
 
 
+	      .prev_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+	            font-size: 50px;
+	            transition: 0.6s ease;
+	            border-radius: 0 5px 5px 0;
+	      }
 
-     /*==================================================
-     =                Fading animation                  =
-     ==================================================*/
+	            .prev_custom:hover {
+	                  background-color: lighten($color-black, 5%);
+	            }
+
+	      .next_custom {
+	            cursor: pointer;
+	            position: absolute;
+	            top: 50%;
+	            right: 0;
+	            width: auto;
+	            margin-top: -22px;
+	            padding: 16px;
+	            color: $color-black;
+	            font-weight: bold;
+	            font-size: 50px;
+	            transition: 0.6s ease;
+	            border-radius: 0 5px 5px 0;
+	      }
+
+	            .next_custom:hover {
+	                  background-color: lighten($color-black, 5%);
+	            }
+
+	      .text_custom {
+                color: $color-black;
+	            font-size: 30px;
+	            padding: 8px 12px;
+	            position: absolute;
+	            bottom: 8px;
+	            width: 100%;
+	            text-align: center;
+	      }
 
 
-     .fade_custom {
-          -webkit-animation-name: fade;
-          -webkit-animation-duration: 1.5s;
-          animation-name: fade;
-          animation-duration: 1.5s;
-     }
-     
-     @-webkit-keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-     }
-     
-     @keyframes fade {
-          from {opacity: .4} 
-          to {opacity: 1}
-     }
+	      .fade_custom {
+	            -webkit-animation-name: fade;
+	            -webkit-animation-duration: 1.5s;
+	            animation-name: fade;
+	            animation-duration: 1.5s;
+	      }
+
+          @-webkit-keyframes fade {
+	            from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      @keyframes fade {
+	            from {opacity: .4}
+	            to {opacity: 1}
+	      }
+
+	      .slideshow_img_custom {
+	            border-radius: 7px;
+	            -webkit-filter: invert(.8);
+	            filter: invert(.8);
+	      }
+    }
+
+
+    .dot_con_custom {
+          text-align: center;
+
+	      .dot {
+	            cursor:pointer;
+	            height: 13px;
+	            width: 13px;
+	            margin: 0 2px;
+	            background-color: #bbb;
+	            border-radius: 50%;
+	            display: inline-block;
+	            transition: background-color 0.6s ease;
+	      }
+
+	            .active, .dot:hover {
+	                  background-color: #717171;
+	            }
+    }
 
 
 }
 
 
 /*==================================================
-=       End of Slideshow container                =
-==================================================*/ 
+=   Large Devices, Large Desktops, Wide Screens    =
+==================================================*/
+
+
+@media only screen and (min-width : 1200px) {
+
+	.slideshow_con_custom {
+		  max-width: 100%;
+		  position: relative;
+		  margin: auto;
+
+
+          .prev_custom {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				margin-top: -22px;
+				padding: 16px;
+				color: $color-black;
+				font-weight: bold;
+				font-size: 50px;
+				transition: 0.6s ease;
+				border-radius: 0 5px 5px 0;
+          }
+
+				.prev_custom:hover {
+					  background-color: lighten($color-black, 5%);
+				}
+
+          .next_custom {
+			    cursor: pointer;
+			    position: absolute;
+			    top: 50%;
+			    right: 0;
+			    width: auto;
+			    margin-top: -22px;
+			    padding: 16px;
+			    color: $color-black;
+			    font-weight: bold;
+			    font-size: 50px;
+			    transition: 0.6s ease;
+			    border-radius: 0 5px 5px 0;
+          }
+
+				.next_custom:hover {
+					  background-color: lighten($color-black, 5%);
+				}
+
+          .text_custom {
+				color: $color-black;
+				font-size: 30px;
+				padding: 8px 12px;
+				position: absolute;
+				bottom: 8px;
+				width: 100%;
+				text-align: center;
+          }
+
+
+          .fade_custom {
+				-webkit-animation-name: fade;
+				-webkit-animation-duration: 1.5s;
+				animation-name: fade;
+				animation-duration: 1.5s;
+          }
+
+          @-webkit-keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+          }
+
+          @keyframes fade {
+				from {opacity: .4}
+				to {opacity: 1}
+          }
+
+          .slideshow_img_custom {
+				border-radius: 7px;
+				-webkit-filter: invert(.8);
+				filter: invert(.8);
+          }
+	}
+
+
+	.dot_con_custom {
+		  text-align: center;
+
+		  .dot {
+			    cursor:pointer;
+			    height: 13px;
+			    width: 13px;
+			    margin: 0 2px;
+			    background-color: #bbb;
+			    border-radius: 50%;
+			    display: inline-block;
+			    transition: background-color 0.6s ease;
+		  }
+
+			    .active, .dot:hover {
+				      background-color: #717171;
+			    }
+	}
+}
+
+
+
+
+
+
+
