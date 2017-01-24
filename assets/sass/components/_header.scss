@@ -160,14 +160,14 @@
 
 @media only screen and (min-width : 1200px) {
 	.nav_custom {
-		padding: 20px 0 20px 0;
+		padding: 35px 0 35px 0;
 		border-radius: 0;
 		border: 0;
 		background-color: $color-gray;
 
 		.logo_custom {
 			color: $color-black;
-			font-size: 60px;
+			font-size: 70px;
 			font-weight: bold;
 			font-family: $font-secondary;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -184,8 +184,8 @@
 			background-color: $color-black;
 			font-size: 18px;
 			font-family: $font-primary;
-			padding: 6px 12px;
-			margin: 13px 0 0 10px;
+			padding: 10px 15px;
+			margin: 11px 0 0 10px;
 			border-radius: 5px;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;

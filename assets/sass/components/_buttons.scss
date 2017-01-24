@@ -1,8 +1,14 @@
+/*====================================================================
+============  BUTTONS CUSTOM ====================================
+====================================================================*/
+
+
+
 .regular_button_custom {
       color: $color-black;
-      background-color: $color-blue;
       font-size: 18px;
       font-family: $font-primary;
+      background-color: $color-blue;
       padding: 6px 12px;
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
