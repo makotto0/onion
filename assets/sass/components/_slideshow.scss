@@ -443,7 +443,8 @@
           }
 
 				.prev_custom:hover {
-					  background-color: lighten($color-black, 5%);
+					color: $color-gray;
+					background-color: lighten($color-black, 5%);
 				}
 
           .next_custom {
@@ -462,11 +463,12 @@
           }
 
 				.next_custom:hover {
-					  background-color: lighten($color-black, 5%);
+					color: $color-gray;
+					background-color: lighten($color-black, 5%);
 				}
 
           .text_custom {
-				color: $color-black;
+				color: $color-gray;
 				font-size: 30px;
 				padding: 8px 12px;
 				position: absolute;
@@ -495,8 +497,8 @@
 
           .slideshow_img_custom {
 				border-radius: 7px;
-				-webkit-filter: invert(.8);
-				filter: invert(.8);
+			  	-webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+			  	filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
           }
 	}
 
@@ -520,8 +522,6 @@
 			    }
 	}
 }
-
-
 
 
 

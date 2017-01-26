@@ -14,6 +14,8 @@
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       transition: background 0.3s linear 0s, color 0.3s linear 0s;
+      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
 }
 
 .regular_button_custom:hover {

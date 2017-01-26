@@ -56,21 +56,21 @@
      <div class="row">
           <div class="col-sm-4 border_right_custom">
                <section>
-                    <h4 class="blue_text_custom">Heading</h4>
+                    <h3 class="blue_text_custom">Heading</h3>
                     <div class="spacer-small"></div>
                     <p>Donuce opping candy canes topping. Soufflé marzipan brownie..Donuce opping candy canes topping. Soufflé marzipan brownie..</p>
                </section>
           </div>
           <div class="col-sm-4 border_right_custom">
                <section>
-                    <h4 class="blue_text_custom">Heading</h4>
+                    <h3 class="blue_text_custom">Heading</h3>
                     <div class="spacer-small"></div>
                     <p>Donuce opping candy canes topping. Soufflé marzipan brownie..Donuce opping candy canes topping. Soufflé marzipan brownie..</p>
                </section>
           </div>
           <div class="col-sm-4">
                <section>
-                    <h4 class="blue_text_custom">Heading</h4>
+                    <h3 class="blue_text_custom">Heading</h3>
                     <div class="spacer-small"></div>
                     <p>Donuce opping candy canes topping. Soufflé marzipan brownie..Donuce opping candy canes topping. Soufflé marzipan brownie..</p>
                </section>
@@ -310,58 +310,63 @@
 =========== FORM VALIDATION CUSTOM =========== -->
 
 
-
-<div class="conatiner">
+<div class="container">
      <div class="row">
           <div class="col-sm-8">
 
-
-               <!-- multistep form -->
                <form id="msform">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                         <li class="active">Account Setup</li>
-                         <li>Social Profiles</li>
-                         <li>Personal Details</li>
+                         <li class="active">Personal Details</li>
+                         <li class="disabled">Account Setup</li>
+                         <li class="disabled">Social Profiles</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
-                         <h2 class="fs-title">Create your account</h2>
-                         <h3 class="fs-subtitle">This is step 1</h3>
-                         <input type="text" name="email" placeholder="Email" />
-                         <input type="password" name="pass" placeholder="Password" />
-                         <input type="password" name="cpass" placeholder="Confirm Password" />
-                         <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                         <h2 class="fs-title">Social Profiles</h2>
-                         <h3 class="fs-subtitle">Your presence on the social network</h3>
-                         <input type="text" name="twitter" placeholder="Twitter" />
-                         <input type="text" name="facebook" placeholder="Facebook" />
-                         <input type="text" name="gplus" placeholder="Google Plus" />
-                         <input type="button" name="previous" class="previous action-button" value="Previous" />
-                         <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
-                    <fieldset>
-                         <h2 class="fs-title">Personal Details</h2>
-                         <h3 class="fs-subtitle">We will never sell it</h3>
+                         <h2 class="fs-title">Step 1: Personal Details</h2>
+                         <h3 class="fs-subtitle">We will never sell it!</h3>
+
                          <input type="text" name="fname" placeholder="First Name" />
                          <input type="text" name="lname" placeholder="Last Name" />
                          <input type="text" name="phone" placeholder="Phone" />
                          <textarea name="address" placeholder="Address"></textarea>
+                         <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+
+
+
+                    <fieldset>
+                         <h2 class="fs-title">Step 2: Account setup</h2>
+                         <h3 class="fs-subtitle">Create your account!</h3>
+
+                         <input type="text" name="email" placeholder="Email" />
+                         <input type="password" name="pass" placeholder="Password" />
+                         <input type="password" name="cpass" placeholder="Confirm Password" />
+                         <input type="button" name="previous" class="previous action-button" value="Previous" />
+                         <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+
+
+
+                    <fieldset>
+                         <h2 class="fs-title">Step 3: Social Profiles</h2>
+                         <h3 class="fs-subtitle">Your presence on the social network</h3>
+
+                         <input type="text" name="twitter" placeholder="Twitter" />
+                         <input type="text" name="facebook" placeholder="Facebook" />
+                         <input type="text" name="gplus" placeholder="Google Plus" />
                          <input type="button" name="previous" class="previous action-button" value="Previous" />
                     </fieldset>
                </form>
 
 
 
-
-          </div>
-          <div class="col-sm-4">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae corporis enim error, iure iusto magnam minus molestias necessitatibus odit officia optio pariatur possimus quaerat totam unde veritatis voluptatibus. Exercitationem.</p>
           </div>
      </div>
 </div>
+
+
+
 
 
 

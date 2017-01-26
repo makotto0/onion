@@ -1,20 +1,20 @@
+
 /*form styles*/
 #msform {
-  width: 900px;
-  margin: 50px auto;
   text-align: center;
   position: relative;
 }
 #msform fieldset {
-  background: white;
+  background: $color-blue;
   border: 0 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   padding: 20px 30px;
-
   box-sizing: border-box;
-  width: 80%;
-  margin: 0 10%;
+  width: 100%;
+  margin: 0 0 0 3%;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+  filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
 
   /*stacking fieldsets above each other*/
   position: absolute;
@@ -26,80 +26,85 @@
 /*inputs*/
 #msform input, #msform textarea {
   padding: 15px;
-  border: 5px solid $color-blue;
+  border: 3px solid  $color-black;
   border-radius: 5px;
   margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
-  color: $color-gray;
-  font-size: 15px;
+  font-family: $font-primary;
+  color: $color-black;
+  font-size: 20px;
+  background-color: transparent;
 }
 /*buttons*/
 #msform .action-button {
-  width: 100px;
+  width: 25%;
   background: $color-green;
   font-weight: bold;
-  color: white;
+  font-family: $font-primary;
+  color: $color-black;
+  text-transform: uppercase;
   border: 0 none;
-  border-radius: 1px;
+  border-radius: 5px;
   cursor: pointer;
   padding: 10px 5px;
-  margin: 10px 5px;
+  margin: 7px 5px;
+  -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+  -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+  transition: background 0.3s linear 0s, color 0.3s linear 0s;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+  box-shadow: 0 0 0 2px $color-green, 0 0 0 3px $color-green;
 }
 /*headings*/
 .fs-title {
-  font-size: 15px;
+  font-size: 40px;
   text-transform: uppercase;
-  color: #2C3E50;
-  margin-bottom: 10px;
+  color: $color-black;
+  margin-bottom: 50px;
 }
 .fs-subtitle {
   font-weight: normal;
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 35px;
+  color: $color-black;
+  margin-bottom: 40px;
 }
 /*progressbar*/
 #progressbar {
-  margin-bottom: 80px;
-  padding-left:0;
+  margin-bottom: 100px;
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
 }
 #progressbar li {
   list-style-type: none;
-  color: white;
+  color: $color-blue;
   text-transform: uppercase;
-  font-size: 9px;
-  width: 33.33%;
+  font-size: 20px;
   float: left;
   position: relative;
 }
 #progressbar li:before {
   content: counter(step);
   counter-increment: step;
-  width: 20px;
-  line-height: 20px;
+  width: 40px;
+  line-height: 40px;
   display: block;
-  font-size: 10px;
-  color: #333;
-  background: white;
-  border-radius: 3px;
-  margin: 0 auto 5px auto;
+  font-size: 20px;
+  color: $color-black;
+  background: $color-blue;
+  border-radius: 5px;
+  margin: 0 98px;
 }
 /*progressbar connectors*/
 #progressbar li:after {
   content: '';
   width: 100%;
-  height: 2px;
-  background: white;
+  height: 4px;
+  background: $color-blue;
   position: absolute;
   left: -50%;
-  top: 9px;
+  top: 18px;
   z-index: -1; /*put it behind the numbers*/
 }
 #progressbar li:first-child:after {
@@ -109,6 +114,7 @@
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-  background: #27AE60;
-  color: white;
+  background: $color-green;
+  color: $color-blue;
 }
+
