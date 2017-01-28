@@ -326,11 +326,16 @@
                          <h2 class="fs-title">Step 1: Personal Details</h2>
                          <h3 class="fs-subtitle">We will never sell it!</h3>
 
-                         <input type="text" name="fname" placeholder="First Name" />
-                         <input type="text" name="lname" placeholder="Last Name" />
-                         <input type="text" name="phone" placeholder="Phone" />
-                         <textarea name="address" placeholder="Address"></textarea>
-                         <input type="button" name="next" class="next action-button" value="Next" />
+                         <input id="fname_field" type="text" name="fname" placeholder="First Name" />
+                         <span id="fname_error" class="hide error">First Name is required</span>
+                         <input id="lname_field" type="text" name="lname" placeholder="Last Name" />
+                         <span id="lname_error" class="hide error">Last Name is required</span>
+                         <input id="phone_field" type="text" name="phone" placeholder="Phone (+389123456)" />
+                         <span id="phone_error_empty" class="hide error">Phone is required</span>
+                         <span id="phone_error_invalid" class="hide error">Phone is invalid</span>
+                         <textarea id="address_field" name="address" placeholder="Address"></textarea>
+                         <span id="address_error" class="hide error">Address is required</span>
+                         <input id="step_one_next" type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
 
@@ -340,9 +345,11 @@
                          <h3 class="fs-subtitle">Create your account!</h3>
 
                          <input type="text" name="email" placeholder="Email" />
+                         <span id="email_error" class="hide error">E-mail adress required</span>
                          <input type="password" name="pass" placeholder="Password" />
+                         <span id="passworde_error" class="hide error">Password is required</span>
                          <input type="password" name="cpass" placeholder="Confirm Password" />
-                         <input type="button" name="previous" class="previous action-button" value="Previous" />
+                         <span id="confirm_password_error" class="hide error">You have to confirm the password!</span>
                          <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
@@ -355,7 +362,7 @@
                          <input type="text" name="twitter" placeholder="Twitter" />
                          <input type="text" name="facebook" placeholder="Facebook" />
                          <input type="text" name="gplus" placeholder="Google Plus" />
-                         <input type="button" name="previous" class="previous action-button" value="Previous" />
+                         <input type="button" name="complete" class="complete action-button" value="Complete" />
                     </fieldset>
                </form>
 
