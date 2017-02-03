@@ -1,5 +1,5 @@
 /*====================================================================
-============  BUTTONS CUSTOM ====================================
+=================  BUTTONS CUSTOM ====================================
 ====================================================================*/
 
 
@@ -14,11 +14,62 @@
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
 }
 
 .regular_button_custom:hover {
       color: $color-black;
       background-color: $color-gray;
+}
+
+/*====================================================================
+===============  CHECKOUT button created only with css================
+====================================================================*/
+
+
+
+.checkout_btn {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      margin: 20px auto;
+      color: $color-black;
+      background-color: $color-green;
+      background: -webkit-linear-gradient(#6FB536, #75D701);
+      background: linear-gradient(#75D701, #6FB536);
+      border: 0 none;
+      border-radius: 5px;
+      text-shadow: 0 -1px 0 #000;
+      box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+      cursor: pointer;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease;
+}
+
+.checkout_btn:hover, .checkout_btn:focus {
+      -webkit-animation: pulsate 1.2s linear infinite;
+      animation: pulsate 1.2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+      0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+      50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+      100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+@keyframes pulsate {
+      0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+      50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+      100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+.checkout_btn:active {
+      color: #fff;
+      text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+      box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+      -webkit-transform: translateY(3px);
+      transform: translateY(3px);
+      -webkit-animation: none;
+      animation: none;
 }

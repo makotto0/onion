@@ -5967,9 +5967,7 @@ a:hover {
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
-      filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9)); }
+      transition: background 0.3s linear 0s, color 0.3s linear 0s; }
     .nav_custom .button_custom:hover {
       color: #333;
       background-color: #3795b3; } }
@@ -6416,7 +6414,7 @@ a:hover {
   color: #b0aeae; }
 
 /*====================================================================
-============  BUTTONS CUSTOM ====================================
+=================  BUTTONS CUSTOM ====================================
 ====================================================================*/
 .regular_button_custom {
   color: #333;
@@ -6427,13 +6425,66 @@ a:hover {
   border-radius: 5px;
   -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
   -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-  transition: background 0.3s linear 0s, color 0.3s linear 0s;
-  -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
-  filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9)); }
+  transition: background 0.3s linear 0s, color 0.3s linear 0s; }
 
 .regular_button_custom:hover {
   color: #333;
   background-color: #a3a1a1; }
+
+/*====================================================================
+===============  CHECKOUT button created only with css================
+====================================================================*/
+.checkout_btn {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 20px auto;
+  color: #333;
+  background-color: #6FB536;
+  background: -webkit-linear-gradient(#6FB536, #75D701);
+  background: linear-gradient(#75D701, #6FB536);
+  border: 0 none;
+  border-radius: 5px;
+  text-shadow: 0 -1px 0 #000;
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease; }
+
+.checkout_btn:hover, .checkout_btn:focus {
+  -webkit-animation: pulsate 1.2s linear infinite;
+  animation: pulsate 1.2s linear infinite; }
+
+@-webkit-keyframes pulsate {
+  0% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; }
+  50% {
+    color: #fff;
+    text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+  100% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; } }
+@keyframes pulsate {
+  0% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; }
+  50% {
+    color: #fff;
+    text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+  100% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; } }
+.checkout_btn:active {
+  color: #fff;
+  text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+  box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0, 0, 0, 0.9);
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+  -webkit-animation: none;
+  animation: none; }
 
 /*====================================================================
 ============  ARTICLE / ASIDE ====================================
@@ -6443,122 +6494,189 @@ a:hover {
   background-color: transparent;
   border: 3px solid #a3a1a1; }
 
-/*form styles*/
+/* Form styles */
 #msform {
   text-align: center;
-  position: relative; }
+  padding: 0;
+  /*progressbar*/
+  /* Fieldsets */
+  /*Hide all except first fieldset*/ }
+  #msform #progressbar {
+    margin-bottom: 100px;
+    padding: 0;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    /*progressbar connectors*/
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/ }
+    #msform #progressbar li {
+      list-style-type: none;
+      color: #3795b3;
+      text-transform: uppercase;
+      font-size: 20px;
+      display: inline-block; }
+    #msform #progressbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 40px;
+      line-height: 40px;
+      display: block;
+      font-size: 20px;
+      color: #333;
+      background: #3795b3;
+      border-radius: 5px;
+      margin: 0 98px; }
+    #msform #progressbar li:after {
+      content: '';
+      width: 30%;
+      height: 4px;
+      background: #3795b3;
+      position: absolute;
+      left: 35%;
+      top: 18px;
+      z-index: -1;
+      /*put it behind the numbers*/ }
+    #msform #progressbar li:first-child:after {
+      /*connector not needed before the first step*/
+      content: none; }
+    #msform #progressbar li.active:before, #msform #progressbar li.active:after {
+      background: #6FB536;
+      color: #3795b3; }
+  #msform fieldset {
+    background: #3795b3;
+    border: 0 none;
+    border-radius: 5px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
+    /*headings*/
+    /*inputs*/
+    /* Placeholders */
+    /*buttons*/ }
+    #msform fieldset .fs-title {
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #333;
+      margin-bottom: 50px; }
+    #msform fieldset .fs-subtitle {
+      font-weight: normal;
+      font-size: 35px;
+      color: #333;
+      margin-bottom: 40px; }
+    #msform fieldset input, #msform fieldset textarea {
+      padding: 10px;
+      border: 3px solid #333;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: "Russo One", sans-serif;
+      color: #333;
+      font-size: 20px;
+      background-color: transparent; }
+    #msform fieldset input:focus, #msform fieldset textarea:focus {
+      border-color: #FFF;
+      color: #FFF; }
+    #msform fieldset ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #333; }
+    #msform fieldset ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #333; }
+    #msform fieldset :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #333; }
+    #msform fieldset :-moz-placeholder {
+      /* Firefox 18- */
+      color: #333; }
+    #msform fieldset .action-button {
+      width: 25%;
+      font-weight: bold;
+      font-family: "Russo One", sans-serif;
+      color: #333;
+      text-transform: uppercase;
+      border: 0 none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 5px;
+      margin: 30px 0 20px 0;
+      background: #6FB536;
+      background: -webkit-linear-gradient(#6FB536, #75D701);
+      background: linear-gradient(#75D701, #6FB536);
+      box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0, 0, 0, 0.6);
+      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+      transition: background 0.3s linear 0s, color 0.3s linear 0s; }
+    #msform fieldset .action-button:hover, #msform fieldset .action-button:focus {
+      -webkit-animation: pulsate 1.2s linear infinite;
+      animation: pulsate 1.2s linear infinite;
+      box-shadow: 0 0 0 2px #6FB536, 0 0 0 3px #6FB536; }
+    #msform fieldset .action-button-two {
+      width: 30%;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      margin: 20px auto;
+      color: #333;
+      background-color: #6FB536;
+      background: -webkit-linear-gradient(#6FB536, #75D701);
+      background: linear-gradient(#75D701, #6FB536);
+      border: 0 none;
+      border-radius: 5px;
+      text-shadow: 0 -1px 0 #000;
+      box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease; }
+    #msform fieldset .action-button-two:hover, #msform fieldset .action-button-two:focus {
+      -webkit-animation: pulsate 1.2s linear infinite;
+      animation: pulsate 1.2s linear infinite; }
+@-webkit-keyframes pulsate {
+  0% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; }
+  50% {
+    color: #fff;
+    text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+  100% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; } }
+@keyframes pulsate {
+  0% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; }
+  50% {
+    color: #fff;
+    text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+  100% {
+    color: #ddd;
+    text-shadow: 0 -1px 0 #000; } }
+    #msform fieldset .action-button-two:active {
+      color: #fff;
+      text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+      box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0, 0, 0, 0.9);
+      -webkit-transform: translateY(3px);
+      transform: translateY(3px);
+      -webkit-animation: none;
+      animation: none; }
+  #msform fieldset:not(:first-of-type) {
+    display: none; }
 
-#msform fieldset {
-  background: #3795b3;
-  border: 0 none;
-  border-radius: 5px;
-  padding: 20px 30px;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 0 0 3%;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  -webkit-filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
-  filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.9));
-  /*stacking fieldsets above each other*/
-  position: absolute; }
+.error {
+  color: #d72828;
+  font-size: 18px;
+  text-align: left;
+  background-color: transparent;
+  margin: 0 0 30px 0;
+  padding: 0 0 5px 0px;
+  display: block; }
 
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-  display: none; }
-
-/*inputs*/
-#msform input, #msform textarea {
-  padding: 15px;
-  border: 3px solid #333;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: "Russo One", sans-serif;
-  color: #333;
-  font-size: 20px;
-  background-color: transparent; }
-
-/*buttons*/
-#msform .action-button {
-  width: 25%;
-  background: #6FB536;
-  font-weight: bold;
-  font-family: "Russo One", sans-serif;
-  color: #333;
-  text-transform: uppercase;
-  border: 0 none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 7px 5px;
-  -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-  -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-  transition: background 0.3s linear 0s, color 0.3s linear 0s; }
-
-#msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px #6FB536, 0 0 0 3px #6FB536; }
-
-/*headings*/
-.fs-title {
-  font-size: 40px;
-  text-transform: uppercase;
-  color: #333;
-  margin-bottom: 50px; }
-
-.fs-subtitle {
-  font-weight: normal;
-  font-size: 35px;
-  color: #333;
-  margin-bottom: 40px; }
-
-/*progressbar*/
-#progressbar {
-  margin-bottom: 100px;
-  overflow: hidden;
-  /*CSS counters to number the steps*/
-  counter-reset: step; }
-
-#progressbar li {
-  list-style-type: none;
-  color: #3795b3;
-  text-transform: uppercase;
-  font-size: 20px;
-  float: left;
-  position: relative; }
-
-#progressbar li:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 40px;
-  line-height: 40px;
-  display: block;
-  font-size: 20px;
-  color: #333;
-  background: #3795b3;
-  border-radius: 5px;
-  margin: 0 98px; }
-
-/*progressbar connectors*/
-#progressbar li:after {
-  content: '';
-  width: 100%;
-  height: 4px;
-  background: #3795b3;
-  position: absolute;
-  left: -50%;
-  top: 18px;
-  z-index: -1;
-  /*put it behind the numbers*/ }
-
-#progressbar li:first-child:after {
-  /*connector not needed before the first step*/
-  content: none; }
-
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
-  background: #6FB536;
-  color: #3795b3; }
+.error_img {
+  width: 20px;
+  margin: 0 5px 2px 10px; }
 
 /*# sourceMappingURL=style.css.map */

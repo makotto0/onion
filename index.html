@@ -8,6 +8,8 @@
 
      <!-- CSS-custom -->
      <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
      
 </head>
 <body>
@@ -318,8 +320,7 @@
                     <!-- progressbar -->
                     <ul id="progressbar">
                          <li class="active">Personal Details</li>
-                         <li class="disabled">Account Setup</li>
-                         <li class="disabled">Social Profiles</li>
+                         <li>Account Setup</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
@@ -327,50 +328,69 @@
                          <h3 class="fs-subtitle">We will never sell it!</h3>
 
                          <input id="fname_field" type="text" name="fname" placeholder="First Name" />
-                         <span id="fname_error" class="hide error">First Name is required</span>
+                         <span id="fname_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">First name is required!</span>
+
                          <input id="lname_field" type="text" name="lname" placeholder="Last Name" />
-                         <span id="lname_error" class="hide error">Last Name is required</span>
+                         <span id="lname_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Last Name is required!!</span>
+
                          <input id="phone_field" type="text" name="phone" placeholder="Phone (+389123456)" />
-                         <span id="phone_error_empty" class="hide error">Phone is required</span>
-                         <span id="phone_error_invalid" class="hide error">Phone is invalid</span>
+                         <span id="phone_error_empty" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Phone is required!!</span>
+                         <span id="phone_error_invalid" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Phone is invalid!!</span>
+
                          <textarea id="address_field" name="address" placeholder="Address"></textarea>
-                         <span id="address_error" class="hide error">Address is required</span>
+                         <span id="address_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Address is required!!</span>
+
                          <input id="step_one_next" type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
 
 
-                    <fieldset>
+                    <fieldset id="fieldset_two">
                          <h2 class="fs-title">Step 2: Account setup</h2>
                          <h3 class="fs-subtitle">Create your account!</h3>
 
-                         <input type="text" name="email" placeholder="Email" />
-                         <span id="email_error" class="hide error">E-mail adress required</span>
-                         <input type="password" name="pass" placeholder="Password" />
-                         <span id="passworde_error" class="hide error">Password is required</span>
-                         <input type="password" name="cpass" placeholder="Confirm Password" />
-                         <span id="confirm_password_error" class="hide error">You have to confirm the password!</span>
-                         <input type="button" name="next" class="next action-button" value="Next" />
-                    </fieldset>
+                         <input id="email_field" type="email" name="email" placeholder="Email (example@gmail.com)" />
+                         <span id="email_error_empty" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">E-mail adress required</span>
+                         <span id="email_error_invalid" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Invalid e-mail adress!</span>
+
+                         <input id="password_field" class="password" type="password" name="password" placeholder="Password" />
+                         <span id="password_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Password is required!</span>
+
+                         <input id="confirm_password_field" class="confirm_password" type="password" name="confirm_password" placeholder="Confirm Password" />
+                         <span id="confirm_password_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">You have to confirm the password!!</span>
+
+                         <input id="step_two_complete" type="button" name="complete" class="complete action-button-two" value="&#9734; Complete &#9734;" data-toggle="modal" data-target="#myModal" />
 
 
-
-                    <fieldset>
-                         <h2 class="fs-title">Step 3: Social Profiles</h2>
-                         <h3 class="fs-subtitle">Your presence on the social network</h3>
-
-                         <input type="text" name="twitter" placeholder="Twitter" />
-                         <input type="text" name="facebook" placeholder="Facebook" />
-                         <input type="text" name="gplus" placeholder="Google Plus" />
-                         <input type="button" name="complete" class="complete action-button" value="Complete" />
                     </fieldset>
                </form>
 
+
+              <!-- Modal -->
+              <div class="modal animated tada" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                          </div>
+                          <div class="modal-body">
+                              ...
+                          </div>
+                          <div class="modal-footer">
+                              <button id="close_button" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
 
           </div>
      </div>
 </div>
+
+
+
 
 
 
@@ -443,4 +463,5 @@
 
 
 
-</body></html>
+</body>
+</html>
