@@ -4,16 +4,20 @@
 
 
 .border_right_custom {
-  border-right: $color-gray solid 2px;
+  border-right: $color-blue solid 3px;
 }
 
 .border_bottom_custom {
   padding-top: 40px;
-  border-bottom: $color-gray solid 2px;
+  border-bottom: $color-blue solid 3px;
 }
 
 .border_left_custom {
   padding-left: 40px;
-  border-left: $color-gray solid 2px;
+  border-left: $color-blue solid 3px;
+}
 
+.border {
+  width: 100%;
+  border: $color-blue solid 1.5px;
 }

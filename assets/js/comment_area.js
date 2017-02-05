@@ -8,3 +8,5 @@ function postComment() {
     div.innerHTML = comment;
     insertAfter(div, div);
 }
+
+

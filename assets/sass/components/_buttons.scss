@@ -1,31 +1,27 @@
 /*====================================================================
-=================  BUTTONS CUSTOM ====================================
+===========================  BUTTON ==================================
 ====================================================================*/
 
-
-
-.regular_button_custom {
+.btn-primary {
       color: $color-black;
+      background-color: $color-blue;
       font-size: 18px;
       font-family: $font-primary;
-      background-color: $color-blue;
-      padding: 6px 12px;
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       transition: background 0.3s linear 0s, color 0.3s linear 0s;
 }
 
-.regular_button_custom:hover {
-      color: $color-black;
-      background-color: $color-gray;
+.btn-primary:hover {
+      color: $color-white;
+      background-color: $color-green;
+      border-color: $color-green;
 }
 
 /*====================================================================
 ===============  CHECKOUT button created only with css================
 ====================================================================*/
-
-
 
 .checkout_btn {
       display: block;

@@ -4,6 +4,10 @@ body {
 	background-color:$color-black;
 }
 
+p {
+	line-height: 2;
+}
+
 a {
 	text-decoration: none;
 	text-transform: uppercase;
@@ -11,4 +15,8 @@ a {
 
 a:hover {
 	text-decoration: none;
+}
+
+blockquote {
+	border-left: $color-blue solid 3px;
 }

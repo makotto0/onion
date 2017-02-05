@@ -9,7 +9,7 @@
 =   <div class="spacer-small"></div>     = 
 =   <div class="spacer-large"></div>     = 
 =   <div class="spacer-xl"></div>        = 
-========================================*/ 
+========================================
 
 
 .spacer{
@@ -38,5 +38,139 @@
 			padding-bottom: 50px;
 		}
 	}
+}*/
+/*====================================================================
+============ Bootstrap 3 Media Queries for Spacer ====================
+====================================================================*/
+
+
+/*==================================================
+============== Mobile First Method =================
+=              Custom, iPhone Retina
+==================================================*/
+
+
+
+@media only screen and (min-width : 320px) {
+	.spacer{
+		padding-bottom: 15px;
+
+		&-small{
+			padding-bottom: 10px;
+
+		}
+
+		&-large{
+			padding-bottom: 20px;
+		}
+
+		&-xl{
+			padding-bottom: 25px;
+
+		}
+	}
 }
 
+
+/*==================================================
+=       Extra Small Devices, Portrait Phones       =
+==================================================*/
+
+
+@media only screen and (min-width : 480px) {
+	.spacer{
+		padding-bottom: 15px;
+
+		&-small{
+			padding-bottom: 10px;
+
+		}
+
+		&-large{
+			padding-bottom: 20px;
+		}
+
+		&-xl{
+			padding-bottom: 25px;
+
+		}
+	}
+}
+
+
+/*=================================================================================
+= Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
+=================================================================================*/
+
+
+@media only screen and (min-width : 768px) {
+	.spacer{
+		padding-bottom: 40px;
+
+		&-small{
+			padding-bottom: 15px;
+
+		}
+
+		&-large{
+			padding-bottom: 50px;
+		}
+
+		&-xl{
+			padding-bottom: 80px;
+
+		}
+	}
+}
+
+
+/*======================================================
+= Medium Devices, Landscape Tablets, Laptops, Desktops =
+======================================================*/
+
+
+@media only screen and (min-width : 992px) {
+	.spacer{
+		padding-bottom: 40px;
+
+		&-small{
+			padding-bottom: 15px;
+
+		}
+
+		&-large{
+			padding-bottom: 50px;
+		}
+
+		&-xl{
+			padding-bottom: 80px;
+
+		}
+	}
+}
+
+
+/*==================================================
+=   Large Devices, Large Desktops, Wide Screens    =
+==================================================*/
+
+
+@media only screen and (min-width : 1200px) {
+	.spacer{
+		padding-bottom: 40px;
+
+		&-small{
+			padding-bottom: 15px;
+
+		}
+
+		&-large{
+			padding-bottom: 50px;
+		}
+
+		&-xl{
+			padding-bottom: 80px;
+
+		}
+	}
+}

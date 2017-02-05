@@ -1,0 +1,112 @@
+.modal-content {
+  color: $color-black;
+  background-color: $color-blue;
+
+  .modal-header {
+    border-bottom: $color-gray;
+    text-align: center;
+  }
+}
+
+.modal-body {
+  background-color: $color-black;
+
+  #user_icon {
+    color: $color-blue;
+    font-size: 200px;
+    padding: 40px 0 40px 0;
+  }
+
+  #user_phone_icon {
+    color: $color-blue;
+    font-size: 25px;
+    padding: 10px 0 10px 0;
+  }
+
+  #user_address_icon,
+  #user_email_icon,
+  #user_password_icon {
+    @extend #user_phone_icon;
+  }
+
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px;
+    display: inline;
+    color: $color-blue;
+  }
+
+  .user_last_name, {
+    font-size: 45px;
+    display: inline;
+    color: $color-blue;
+    padding: 10px 0 10px 0;
+  }
+
+  .user_phone,
+  .user_address,
+  .user_email,
+  .user_password {
+    font-size: 20px;
+    text-align: left;
+    color: $color-blue;
+    padding: 10px 0 10px 0;
+  }
+
+}
+
+
+.modal-footer {
+  background-color: $color-blue;
+  border-top: $color-gray;
+  
+  #close_button {
+    color: $color-blue;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $color-black;
+    background-color: $color-green;
+    background-color: $color-black;
+    background: -webkit-linear-gradient(#6FB536, #75D701);
+    background: linear-gradient(#75D701, #6FB536);
+    border: 0 none;
+    border-radius: 5px;
+    text-shadow: 0 -1px 0 #000;
+    box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+    cursor: pointer;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+  }
+
+  #close_button:hover, #close_button:focus {
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+  }
+
+  @-webkit-keyframes pulsate {
+    0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+    50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+    100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+  }
+
+  @keyframes pulsate {
+    0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+    50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+    100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+  }
+
+  #close_buttonn:active {
+    color: #fff;
+    text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+    box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+
+
+
+

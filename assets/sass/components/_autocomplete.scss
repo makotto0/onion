@@ -1,0 +1,18 @@
+#autocomplete-results {
+  font-size: 16px;
+  color: $color-black;
+  text-align: left;
+
+  li {
+    color: $color-white;
+    list-style-type: none;
+
+  }
+  
+  li:hover {
+    color: $color-black;
+    -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+    -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
+    transition: background 0.3s linear 0s, color 0.3s linear 0s;
+  }
+}

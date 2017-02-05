@@ -30,7 +30,7 @@
 		.logo_custom {
 			color: $color-black;
 			font-size: 30px;
-			font-weight: bold;
+
 			font-family: $font-secondary;
 		}
 
@@ -62,7 +62,7 @@
 
 		.logo_custom {
 			color: $color-black;
-			font-size: 30px;
+
 			font-weight: bold;
 		}
 
@@ -92,8 +92,7 @@
 
 		.logo_custom {
 			color: $color-black;
-			font-size: 40px;
-			font-weight: bold;
+
 		}
 
 		.button_custom {
@@ -123,7 +122,6 @@
 		.logo_custom {
 			color: $color-black;
 			font-size: 50px;
-			font-weight: bold;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -160,15 +158,14 @@
 
 @media only screen and (min-width : 1200px) {
 	.nav_custom {
-		padding: 35px 0 35px 0;
 		border-radius: 0;
 		border: 0;
 		background-color: $color-gray;
+		padding: 35px 0 35px 0;
 
 		.logo_custom {
 			color: $color-black;
 			font-size: 70px;
-			font-weight: bold;
 			font-family: $font-secondary;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -181,12 +178,12 @@
 
 		.button_custom {
 			color: $color-gray;
-			background-color: $color-black;
 			font-size: 18px;
 			font-family: $font-primary;
+			background-color: $color-black;
+			border-radius: 5px;
 			padding: 10px 15px;
 			margin: 11px 0 0 10px;
-			border-radius: 5px;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			transition: background 0.3s linear 0s, color 0.3s linear 0s;

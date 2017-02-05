@@ -1,218 +1,820 @@
-/* Form styles */
-#msform {
-  text-align: center;
-  padding: 0;
+
+/*====================================================================
+============ Bootstrap 3 Media Queries for FORM VALIDATION ===========
+====================================================================*/
 
 
-  /*progressbar*/
-  #progressbar {
-    margin-bottom: 100px;
-    padding: 0;
-    overflow: hidden;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
+/*==================================================
+============== Mobile First Method =================
+=              Custom, iPhone Retina
+==================================================*/
 
 
-    li {
-      list-style-type: none;
-      color: $color-blue;
-      text-transform: uppercase;
-      font-size: 20px;
-      display: inline-block;
+
+@media only screen and (min-width : 320px) {
+  #msform {
+    text-align: center;
+    padding: 70px 0 0 0;
+
+    /*progressbar*/
+    #progressbar {
+      padding: 0;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+
+
+      li {
+        list-style-type: none;
+        color: $color-blue;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+      }
+
+
+      li:before {
+        content: counter(step);
+        counter-increment: step;
+        line-height: 60px;
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        color: $color-black;
+        background: $color-blue;
+        border-radius: 5px;
+      }
+
+      /*marking active/completed steps green*/
+      /*The number of the step and the connector before it = green*/
+      li.active:before, li.active:after{
+        background: $color-green;
+        color: $color-blue;
+      }
+
     }
 
-
-    li:before {
-      content: counter(step);
-      counter-increment: step;
-      width: 40px;
-      line-height: 40px;
-      display: block;
-      font-size: 20px;
-      color: $color-black;
+    /* Fieldsets */
+    fieldset {
       background: $color-blue;
+      border: 0 none;
       border-radius: 5px;
-      margin: 0 98px;
-    }
-
-
-    /*progressbar connectors*/
-    li:after {
-      content: '';
-      width: 30%;
-      height: 4px;
-      background: $color-blue;
-      position: absolute;
-      left: 35%;
-      top: 18px;
-      z-index: -1; /*put it behind the numbers*/
-    }
-
-
-    li:first-child:after {
-      /*connector not needed before the first step*/
-      content: none;
-    }
-
-
-    /*marking active/completed steps green*/
-    /*The number of the step and the connector before it = green*/
-    li.active:before, li.active:after{
-      background: $color-green;
-      color: $color-blue;
-    }
-
-
-  }
-
-
-
-  /* Fieldsets */
-  fieldset {
-    background: $color-blue;
-    border: 0 none;
-    border-radius: 5px;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-    filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
-
-
-    /*headings*/
-    .fs-title {
-      font-size: 40px;
-      text-transform: uppercase;
-      color: $color-black;
-      margin-bottom: 50px;
-    }
-    .fs-subtitle {
-      font-weight: normal;
-      font-size: 35px;
-      color: $color-black;
-      margin-bottom: 40px;
-    }
-
-
-    /*inputs*/
-    input, textarea {
-      padding: 10px;
-      border: 3px solid  $color-black;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      width: 100%;
+      padding: 20px 30px;
       box-sizing: border-box;
-      font-family: $font-primary;
-      color: $color-black;
-      font-size: 20px;
-      background-color: transparent;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+
+
+      /*headings*/
+      .fs-title {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $color-black;
+      }
+      .fs-subtitle {
+        font-weight: normal;
+        font-size: 35px;
+        color: $color-black;
+        margin-bottom: 30px;
+      }
+
+
+      /*inputs*/
+      input, textarea {
+        padding: 10px;
+        border: 3px solid  $color-black;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $font-primary;
+        color: $color-black;
+        font-size: 20px;
+        background-color: transparent;
+      }
+
+      input:focus, textarea:focus {
+        border-color: $color-white;
+        color: $color-white;
+      }
+
+      /* Placeholders */
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-black;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color-black;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color-black;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color-black;
+      }
+
+      /*buttons*/
+
+      .action-button {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        color: $color-black;
+        background-color: $color-green;
+        background: -webkit-linear-gradient(#6FB536, #75D701);
+        background: linear-gradient(#75D701, #6FB536);
+        border: 0 none;
+        border-radius: 5px;
+        text-shadow: 0 -1px 0 #000;
+        box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+      }
+
+      .action-button:active {
+        color: #fff;
+        text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+        box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+      }
+
     }
 
 
-    input:focus, textarea:focus {
-      border-color: $color-white;
-      color: $color-white;
+    /*Hide all except first fieldset*/
+    fieldset:not(:first-of-type) {
+      display: none;
     }
-
-
-    /* Placeholders */
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: $color-black;
-    }
-    ::-moz-placeholder { /* Firefox 19+ */
-      color: $color-black;
-    }
-    :-ms-input-placeholder { /* IE 10+ */
-      color: $color-black;
-    }
-    :-moz-placeholder { /* Firefox 18- */
-      color: $color-black;
-    }
-
-
-    /*buttons*/
-    .action-button {
-      width: 25%;
-      font-weight: bold;
-      font-family: $font-primary;
-      color: $color-black;
-      text-transform: uppercase;
-      border: 0 none;
-      border-radius: 5px;
-      cursor: pointer;
-      padding: 10px 5px;
-      margin: 30px 0 20px 0;
-      background: $color-green;
-      background: -webkit-linear-gradient(#6FB536, #75D701);
-      background: linear-gradient(#75D701, #6FB536);
-      box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
-      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      transition: background 0.3s linear 0s, color 0.3s linear 0s;
-    }
-
-
-    .action-button:hover, .action-button:focus {
-      -webkit-animation: pulsate 1.2s linear infinite;
-      animation: pulsate 1.2s linear infinite;
-      box-shadow: 0 0 0 2px $color-green, 0 0 0 3px $color-green;
-    }
-
-
-    .action-button-two {
-      width: 30%;
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 10px 15px;
-      margin: 20px auto;
-      color: $color-black;
-      background-color: $color-green;
-      background: -webkit-linear-gradient(#6FB536, #75D701);
-      background: linear-gradient(#75D701, #6FB536);
-      border: 0 none;
-      border-radius: 5px;
-      text-shadow: 0 -1px 0 #000;
-      box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
-      cursor: pointer;
-      -webkit-transition: all 150ms ease;
-      transition: all 150ms ease;
-    }
-
-
-    .action-button-two:hover, .action-button-two:focus {
-      -webkit-animation: pulsate 1.2s linear infinite;
-      animation: pulsate 1.2s linear infinite;
-    }
-
-    @-webkit-keyframes pulsate {
-      0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
-      50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
-      100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
-    }
-
-    @keyframes pulsate {
-      0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
-      50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
-      100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
-    }
-
-    .action-button-two:active {
-      color: #fff;
-      text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
-      box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
-      -webkit-transform: translateY(3px);
-      transform: translateY(3px);
-      -webkit-animation: none;
-      animation: none;
-    }
-
-
-  }
-
-
-  /*Hide all except first fieldset*/
-  fieldset:not(:first-of-type) {
-    display: none;
   }
 }
+
+
+/*==================================================
+=       Extra Small Devices, Portrait Phones       =
+==================================================*/
+
+
+@media only screen and (min-width : 480px) {
+  #msform {
+    text-align: center;
+    padding: 70px 0 0 0;
+
+    /*progressbar*/
+    #progressbar {
+      padding: 0;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+
+
+      li {
+        list-style-type: none;
+        color: $color-blue;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: bold;
+        display: block;
+      }
+
+
+      li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 100%;
+        line-height: 60px;
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        color: $color-black;
+        background: $color-blue;
+        border-radius: 5px;
+      }
+
+
+      /*marking active/completed steps green*/
+      /*The number of the step and the connector before it = green*/
+      li.active:before, li.active:after{
+        background: $color-green;
+        color: $color-blue;
+      }
+
+
+    }
+
+    /* Fieldsets */
+    fieldset {
+      background: $color-blue;
+      border: 0 none;
+      border-radius: 5px;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+
+
+      /*headings*/
+      .fs-title {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $color-black;
+      }
+      .fs-subtitle {
+        font-weight: normal;
+        font-size: 35px;
+        color: $color-black;
+        margin-bottom: 30px;
+      }
+
+
+      /*inputs*/
+      input, textarea {
+        padding: 10px;
+        border: 3px solid  $color-black;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $font-primary;
+        color: $color-black;
+        font-size: 20px;
+        background-color: transparent;
+      }
+
+      input:focus, textarea:focus {
+        border-color: $color-white;
+        color: $color-white;
+      }
+
+      /* Placeholders */
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-black;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color-black;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color-black;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color-black;
+      }
+
+      /*buttons*/
+
+      .action-button {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        color: $color-black;
+        background-color: $color-green;
+        background: -webkit-linear-gradient(#6FB536, #75D701);
+        background: linear-gradient(#75D701, #6FB536);
+        border: 0 none;
+        border-radius: 5px;
+        text-shadow: 0 -1px 0 #000;
+        box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+      }
+
+      .action-button:active {
+        color: #fff;
+        text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+        box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+      }
+
+    }
+
+
+    /*Hide all except first fieldset*/
+    fieldset:not(:first-of-type) {
+      display: none;
+    }
+  }
+}
+
+
+/*=================================================================================
+= Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
+=================================================================================*/
+
+
+@media only screen and (min-width : 768px) {
+
+  #msform {
+    width: 100%;
+    text-align: center;
+    padding: 70px 0 0 0;
+
+    /*progressbar*/
+    #progressbar {
+      padding: 0;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+
+
+      li {
+        list-style-type: none;
+        color: $color-blue;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: bold;
+        display: block;
+      }
+
+
+      li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 100%;
+        line-height: 60px;
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        color: $color-black;
+        background: $color-blue;
+        border-radius: 5px;
+      }
+
+
+      /*marking active/completed steps green*/
+      /*The number of the step and the connector before it = green*/
+      li.active:before, li.active:after{
+        background: $color-green;
+        color: $color-blue;
+      }
+
+
+    }
+
+
+    /* Fieldsets */
+    fieldset {
+      background: $color-blue;
+      border: 0 none;
+      border-radius: 5px;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+
+
+      /*headings*/
+      .fs-title {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $color-black;
+      }
+      .fs-subtitle {
+        font-weight: normal;
+        font-size: 35px;
+        color: $color-black;
+        margin-bottom: 30px;
+      }
+
+
+      /*inputs*/
+      input, textarea {
+        padding: 10px;
+        border: 3px solid  $color-black;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $font-primary;
+        color: $color-black;
+        font-size: 20px;
+        background-color: transparent;
+      }
+
+      input:focus, textarea:focus {
+        border-color: $color-white;
+        color: $color-white;
+      }
+
+      /* Placeholders */
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-black;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color-black;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color-black;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color-black;
+      }
+
+      /*buttons*/
+
+      .action-button {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        color: $color-black;
+        background-color: $color-green;
+        background: -webkit-linear-gradient(#6FB536, #75D701);
+        background: linear-gradient(#75D701, #6FB536);
+        border: 0 none;
+        border-radius: 5px;
+        text-shadow: 0 -1px 0 #000;
+        box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+      }
+
+      .action-button:active {
+        color: #fff;
+        text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+        box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+      }
+
+    }
+
+
+    /*Hide all except first fieldset*/
+    fieldset:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+}
+
+
+/*======================================================
+= Medium Devices, Landscape Tablets, Laptops, Desktops =
+======================================================*/
+
+
+@media only screen and (min-width : 992px) {
+  #msform {
+           width: 100%;
+           text-align: center;
+           padding: 60px 0 0 0;
+
+           /*progressbar*/
+           #progressbar {
+             padding: 0;
+             overflow: hidden;
+             /*CSS counters to number the steps*/
+             counter-reset: step;
+
+
+             li {
+               list-style-type: none;
+               color: $color-blue;
+               text-transform: uppercase;
+               font-size: 25px;
+               display: inline-block;
+             }
+
+
+             li:before {
+               content: counter(step);
+               counter-increment: step;
+               width: 100px;
+               line-height: 70px;
+               display: block;
+               font-size: 50px;
+               font-weight: bold;
+               color: $color-black;
+               background: $color-blue;
+               border-radius: 5px;
+               margin: 0 98px;
+             }
+
+
+             /*progressbar connectors*/
+             li:after {
+               content: '';
+               width: 33%;
+               height: 4px;
+               background: $color-blue;
+               position: absolute;
+               left: 34%;
+               top: 1998px;
+               z-index: -1; /*put it behind the numbers*/
+             }
+
+
+             li:first-child:after {
+               /*connector not needed before the first step*/
+               content: none;
+             }
+
+
+             /*marking active/completed steps green*/
+             /*The number of the step and the connector before it = green*/
+             li.active:before, li.active:after{
+               background: $color-green;
+               color: $color-blue;
+             }
+
+
+           }
+
+           /* Fieldsets */
+           fieldset {
+             background: $color-blue;
+             border: 0 none;
+             border-radius: 5px;
+             padding: 20px 30px;
+             box-sizing: border-box;
+             box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+             -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+             filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+
+
+             /*headings*/
+             .fs-title {
+               font-size: 40px;
+               text-transform: uppercase;
+               color: $color-black;
+               margin-bottom: 50px;
+             }
+             .fs-subtitle {
+               font-weight: normal;
+               font-size: 35px;
+               color: $color-black;
+               margin-bottom: 40px;
+             }
+
+
+             /*inputs*/
+             input, textarea {
+               padding: 10px;
+               border: 3px solid  $color-black;
+               border-radius: 5px;
+               margin-bottom: 20px;
+               width: 100%;
+               box-sizing: border-box;
+               font-family: $font-primary;
+               color: $color-black;
+               font-size: 20px;
+               background-color: transparent;
+             }
+
+
+             input:focus, textarea:focus {
+               border-color: $color-white;
+               color: $color-white;
+             }
+
+
+             /* Placeholders */
+             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+               color: $color-black;
+             }
+             ::-moz-placeholder { /* Firefox 19+ */
+               color: $color-black;
+             }
+             :-ms-input-placeholder { /* IE 10+ */
+               color: $color-black;
+             }
+             :-moz-placeholder { /* Firefox 18- */
+               color: $color-black;
+             }
+
+
+             /*buttons*/
+             .action-button {
+               font-size: 20px;
+               font-weight: bold;
+               text-transform: uppercase;
+               padding: 10px 15px;
+               color: $color-black;
+               background-color: $color-green;
+               background: -webkit-linear-gradient(#6FB536, #75D701);
+               background: linear-gradient(#75D701, #6FB536);
+               border: 0 none;
+               border-radius: 5px;
+               text-shadow: 0 -1px 0 #000;
+               box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+               cursor: pointer;
+               -webkit-transition: all 150ms ease;
+               transition: all 150ms ease;
+             }
+
+             .action-button:hover, .action-button:focus {
+                color: $color-white;
+             }
+
+             .action-button:active {
+               color: #fff;
+               text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+               box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+               -webkit-transform: translateY(3px);
+               transform: translateY(3px);
+               -webkit-animation: none;
+               animation: none;
+             }
+
+
+    }
+
+    /*Hide all except first fieldset*/
+    fieldset:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+}
+
+
+/*==================================================
+=   Large Devices, Large Desktops, Wide Screens    =
+==================================================*/
+
+
+@media only screen and (min-width : 1200px) {
+  #msform {
+    width: 100%;
+    text-align: center;
+    padding: 110px 0 0 0;
+
+    /*progressbar*/
+    #progressbar {
+      margin-bottom: 50px;
+      padding: 0;
+      overflow: hidden;
+      /*CSS counters to number the steps*/
+      counter-reset: step;
+
+
+      li {
+        list-style-type: none;
+        color: $color-blue;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+
+
+      li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 80px;
+        line-height: 70px;
+        display: block;
+        font-size: 50px;
+        font-weight: bold;
+        color: $color-black;
+        background: $color-blue;
+        border-radius: 5px;
+        margin: 0 98px;
+      }
+
+
+      /*progressbar connectors*/
+      li:after {
+        content: '';
+        width: 30%;
+        height: 4px;
+        background: $color-blue;
+        position: absolute;
+        left: 35%;
+        top: 1884px;
+        z-index: -1; /*put it behind the numbers*/
+      }
+
+
+      li:first-child:after {
+        /*connector not needed before the first step*/
+        content: none;
+      }
+
+
+      /*marking active/completed steps green*/
+      /*The number of the step and the connector before it = green*/
+      li.active:before, li.active:after{
+        background: $color-green;
+        color: $color-blue;
+      }
+
+
+    }
+
+    /* Fieldsets */
+    fieldset {
+      background: $color-blue;
+      border: 0 none;
+      border-radius: 5px;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+      -webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+      filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+
+      /*headings*/
+      .fs-title {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-bottom: 50px;
+      }
+      .fs-subtitle {
+        font-weight: normal;
+        font-size: 35px;
+        color: $color-black;
+        margin-bottom: 40px;
+      }
+
+      /*inputs*/
+      input, textarea {
+        padding: 10px;
+        border: 3px solid  $color-black;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $font-primary;
+        color: $color-black;
+        font-size: 20px;
+        background-color: transparent;
+      }
+
+      input:focus, textarea:focus {
+        border-color: $color-white;
+        color: $color-white;
+      }
+
+      /* Placeholders */
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-black;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $color-black;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $color-black;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color-black;
+      }
+
+      /*buttons*/
+
+      .action-button {
+        width: 30%;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        margin: 20px auto;
+        color: $color-black;
+        background-color: $color-green;
+        background: -webkit-linear-gradient(#6FB536, #75D701);
+        background: linear-gradient(#75D701, #6FB536);
+        border: 0 none;
+        border-radius: 5px;
+        text-shadow: 0 -1px 0 #000;
+        box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+        cursor: pointer;
+        -webkit-transition: all 150ms ease;
+        transition: all 150ms ease;
+      }
+
+      .action-button:hover, .action-button:focus {
+        -webkit-animation: pulsate 1.2s linear infinite;
+        animation: pulsate 1.2s linear infinite;
+      }
+
+      @-webkit-keyframes pulsate {
+        0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+        50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+        100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+      }
+
+      @keyframes pulsate {
+        0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+        50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+        100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+      }
+
+      .action-button:active {
+        color: #fff;
+        text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+        box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+        -webkit-animation: none;
+        animation: none;
+      }
+
+    }
+
+    /*Hide all except first fieldset*/
+    fieldset:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+}
+
+
+
+
+

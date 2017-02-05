@@ -12,11 +12,50 @@ var main_address = '';
 var main_email = '';
 var main_password = '';
 
+var main_countries = getCountriesAjax();
 
+// variables
+var countries_input = document.getElementById('autocomplete-input');
+var results;
 
+// functions
+function autocomplete(val) {
+    var countries_return = [];
+
+    for (i = 0; i < main_countries.length; i++) {
+        if (val === main_countries[i].slice(0, val.length)) {
+            countries_return.push(main_countries[i]);
+        }
+    }
+
+    return countries_return;
+}
+
+// events
+countries_input.onkeyup = function(e) {
+    input_val = this.value; // updates the variable on each ocurrence
+
+    if (input_val.length > 0) {
+        var countries_to_show = [];
+
+        autocomplete_results = document.getElementById("autocomplete-results");
+        autocomplete_results.innerHTML = '';
+        countries_to_show = autocomplete(input_val);
+
+        for (i = 0; i < countries_to_show.length; i++) {
+            autocomplete_results.innerHTML += '<li>' + countries_to_show[i] + '</li>';
+
+        }
+        autocomplete_results.style.display = 'block';
+    } else {
+        countries_to_show = [];
+        autocomplete_results.innerHTML = '';
+    }
+};
 
 
 $("#step_one_next").click(function(){
+    console.log(main_countries);
 //triger za da nemozis da kliknis poke od ednas na btno
     if(animating) return false;
     animating = true;
@@ -166,7 +205,13 @@ $("#step_two_complete").click(function(){
     }
 
     if (successful) {
-        $('.modal-body').append( "<p>"+main_first_name+"</p>" );
+        $('.user_first_name').append( main_first_name );
+        $('.user_last_name').append( main_last_name );
+        $('.user_phone').append( main_phone );
+        $('.user_address').append( main_address );
+        $('.user_email').append( main_email );
+        $('.user_password').append( main_password );
+
         $('#myModal').on('shown.bs.modal', function (e) {
             $("#myModal").modal();
         })
@@ -208,6 +253,27 @@ $("#step_two_complete").click(function(){
 });
 
 
+function getCountriesAjax() {
+    var countries = [];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://restcountries.eu/rest/v1/all');
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            var countries_json = $.parseJSON(xhr.responseText);
+            $.each(countries_json, function (index, value) {
+                $.each(value, function (index, value) {
+                    if (index == "name") {
+                        countries.push(value);
+                    }
+                });
+            });
+            console.log(countries);
+        }
+        else {
+            alert('Request failed.  Returned status of ' + xhr.status);
+        }
+    };
+    xhr.send();
 
-
-
+    return countries;
+}
