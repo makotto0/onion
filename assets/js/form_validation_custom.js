@@ -110,6 +110,8 @@ $("#step_one_next").click(function(){
         successful = false
     }
 
+
+
     var address = $('#address_field').val();
     // proverka dali postoi adresa
     if (address == '') {

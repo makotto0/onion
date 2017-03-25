@@ -4,7 +4,7 @@
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>GameChanger</title>
+          <title>The Onion</title>
 
      <!-- CSS-custom -->
      <link rel="stylesheet" href="assets/css/style.css">
@@ -28,7 +28,7 @@
                     <span class="icon-bar toggle_icon_custom"></span>
                     <span class="icon-bar toggle_icon_custom"></span>
                </button>
-               <a class="navbar-brand logo_custom" href="index.html">Waxom</a>
+               <a class="navbar-brand logo_custom" href="index.html">The Onion</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
                <ul class="nav navbar-nav navbar-right">
@@ -197,23 +197,23 @@
                     <h2 class="fs-title">Step 1: Personal Details</h2>
                     <h3 class="fs-subtitle">We will never sell it!</h3>
 
+                    <span id="fname_error" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>First name is required!</span>
                     <input id="fname_field" type="text" name="fname" placeholder="First Name" />
-                    <span id="fname_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">First name is required!</span>
 
+                    <span id="lname_error" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Last Name is required!!</span>
                     <input id="lname_field" type="text" name="lname" placeholder="Last Name" />
-                    <span id="lname_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Last Name is required!!</span>
 
+                    <span id="phone_error_empty" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Phone is required!!</span>
+                    <span id="phone_error_invalid" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Phone is invalid!!</span>
                     <input id="phone_field" type="text" name="phone" placeholder="Phone (+389123456)" />
-                    <span id="phone_error_empty" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Phone is required!!</span>
-                    <span id="phone_error_invalid" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Phone is invalid!!</span>
 
                     <div id="autocomplete-container">
                          <input type="text" autofocus="true" name="autofocus sample" placeholder="Enter a Country" id="autocomplete-input">
                          <ul id="autocomplete-results"></ul>
                     </div>
 
+                    <span id="address_error" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Address is required!!</span>
                     <textarea id="address_field" name="address" placeholder="Address"></textarea>
-                    <span id="address_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Address is required!!</span>
 
                     <input id="step_one_next" type="button" name="next" class="next action-button" value="Next" />
                </fieldset>
@@ -222,15 +222,15 @@
                     <h2 class="fs-title">Step 2: Account setup</h2>
                     <h3 class="fs-subtitle">Create your account!</h3>
 
+                    <span id="email_error_empty" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>E-mail adress required</span>
+                    <span id="email_error_invalid" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Invalid e-mail adress!</span>
                     <input id="email_field" type="email" name="email" placeholder="Email (example@gmail.com)" />
-                    <span id="email_error_empty" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">E-mail adress required</span>
-                    <span id="email_error_invalid" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Invalid e-mail adress!</span>
 
+                    <span id="password_error" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Password is required!</span>
                     <input id="password_field" class="password" type="password" name="password" placeholder="Password" />
-                    <span id="password_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">Password is required!</span>
 
+                    <span id="confirm_password_error" class="hide error"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Please confirm the password!</span>
                     <input id="confirm_password_field" class="confirm_password" type="password" name="confirm_password" placeholder="Confirm Password" />
-                    <span id="confirm_password_error" class="hide error"><img class="error_img" src="assets/img/error.png" alt="">You have to confirm the password!!</span>
 
                     <input id="step_two_complete" type="button" name="complete" class="complete action-button" value="&#9734; Complete &#9734;" data-toggle="modal" data-target="#myModal" />
 
@@ -377,7 +377,7 @@
 <div class="footer_top">
      <div class="container">
           <div class="col-sm-4">
-               <h3 class="blue_text_custom">About Waxom</h3>
+               <h3 class="blue_text_custom">About The Onion</h3>
                <div class="spacer"></div>
                <p>Pudding pie toffee bear claw caramels bonbon I love fruitcake jelly beans. I love oat I love lemon drops jujubes I love wafer donut. Pie I love soufflé apple pie caramels sweet roll I love. Candy cookie cake croissant.
                     <div class="border"></div>
@@ -389,7 +389,7 @@
                     <i class="fa fa-phone" aria-hidden="true"></i> (+62)21-2224-3333
                     <br>
                     <div class="spacer-small"></div>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> waxom@gmail.com
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> theonion@gmail.com
                </p>
 
           </div>
@@ -408,7 +408,7 @@
           <div class="col-sm-4">
                <h3 class="blue_text_custom">Our Twitter</h3>
                <div class="spacer"></div>
-               <p>I love lemon drops jujubes I love wafer donut <span class="">@waxom</span>sit amet, consectetur adipisicing elit.</p>
+               <p>I love lemon drops jujubes I love wafer donut <span class="">@theOnion</span>sit amet, consectetur adipisicing elit.</p>
                <p class="white_text_custom">3 mins ago</p>
                <div class="border"></div>
                <p>Lorem ipsum I love lemon drops jujubes I love wafer donut <span class="">#envato</span> sit amet, consectetur adipisicing elit.</p>
@@ -427,7 +427,7 @@
 <div class="footer_bottom">
      <div class="container">
           <div class="col-sm-12">
-               <span class="black_text_custom"><b>Copyright </b>&copy; 2016 <span class="footer_span">Waxom</span> |</span>
+               <span class="black_text_custom"><b>Copyright </b>&copy; 2017 <span class="footer_span">The Onion</span> |</span>
                <span class="black_text_custom">Designed by <span class="footer_span">Makoto Konno</span></span>
           </div>
      </div>
