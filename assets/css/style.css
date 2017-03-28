@@ -5854,7 +5854,8 @@ blockquote {
     padding: 5px 0 5px 0;
     border-radius: 0;
     border: 0;
-    background-color: #a3a1a1; }
+    background-color: #a3a1a1;
+    text-align: right; }
     .nav_custom .toggle_button_custom {
       border: #333 2px solid;
       background-color: #333; }

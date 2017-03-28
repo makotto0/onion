@@ -12,46 +12,46 @@ var main_address = '';
 var main_email = '';
 var main_password = '';
 
-var main_countries = getCountriesAjax();
-
-// variables
-var countries_input = document.getElementById('autocomplete-input');
-var results;
-
-// functions
-function autocomplete(val) {
-    var countries_return = [];
-
-    for (i = 0; i < main_countries.length; i++) {
-        if (val === main_countries[i].slice(0, val.length)) {
-            countries_return.push(main_countries[i]);
-        }
-    }
-
-    return countries_return;
-}
-
-// events
-countries_input.onkeyup = function(e) {
-    input_val = this.value; // updates the variable on each ocurrence
-
-    if (input_val.length > 0) {
-        var countries_to_show = [];
-
-        autocomplete_results = document.getElementById("autocomplete-results");
-        autocomplete_results.innerHTML = '';
-        countries_to_show = autocomplete(input_val);
-
-        for (i = 0; i < countries_to_show.length; i++) {
-            autocomplete_results.innerHTML += '<li>' + countries_to_show[i] + '</li>';
-
-        }
-        autocomplete_results.style.display = 'block';
-    } else {
-        countries_to_show = [];
-        autocomplete_results.innerHTML = '';
-    }
-};
+// var main_countries = getCountriesAjax();
+//
+// // variables
+// var countries_input = document.getElementById('autocomplete-input');
+// var results;
+//
+// // functions
+// function autocomplete(val) {
+//     var countries_return = [];
+//
+//     for (i = 0; i < main_countries.length; i++) {
+//         if (val === main_countries[i].slice(0, val.length)) {
+//             countries_return.push(main_countries[i]);
+//         }
+//     }
+//
+//     return countries_return;
+// }
+//
+// // events
+// countries_input.onkeyup = function(e) {
+//     input_val = this.value; // updates the variable on each ocurrence
+//
+//     if (input_val.length > 0) {
+//         var countries_to_show = [];
+//
+//         autocomplete_results = document.getElementById("autocomplete-results");
+//         autocomplete_results.innerHTML = '';
+//         countries_to_show = autocomplete(input_val);
+//
+//         for (i = 0; i < countries_to_show.length; i++) {
+//             autocomplete_results.innerHTML += '<li>' + countries_to_show[i] + '</li>';
+//
+//         }
+//         autocomplete_results.style.display = 'block';
+//     } else {
+//         countries_to_show = [];
+//         autocomplete_results.innerHTML = '';
+//     }
+// };
 
 
 $("#step_one_next").click(function(){
