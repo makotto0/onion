@@ -20,6 +20,7 @@
 		text-align: right;
 
 		.toggle_button_custom {
+			margin-top: 16px;
 			border: $color-black 2px solid;
 			background-color: $color-black;
 
@@ -29,10 +30,11 @@
 		}
 
 		.logo_custom {
-			color: $color-black;
-			font-size: 30px;
-
-			font-family: $font-secondary;
+			float: none;
+			.logo_img_custom {
+				width: 75%;
+				display: inline-block;
+			}
 		}
 
 
@@ -62,9 +64,12 @@
 		background-color: $color-gray;
 
 		.logo_custom {
-			color: $color-black;
-
-			font-weight: bold;
+			float: none;
+			padding: 0;
+			.logo_img_custom {
+				width:75%;
+				display: inline-block;
+			}
 		}
 
 		.button_custom {
@@ -92,16 +97,21 @@
 		background-color: $color-gray;
 
 		.logo_custom {
-			color: $color-black;
-
+			float: left;
+			padding: 0;
+			.logo_img_custom {
+				width: 80%;
+				float: left;
+				display: inline-block;
+			}
 		}
 
 		.button_custom {
 			color: $color-gray;
 			background-color: $color-black;
 			font-size: 16px;
-			padding: 4.5px 10px;
-			margin: 13px 0 0 10px;
+			padding: 5.5px 4px;
+			margin: 33px 0 0 10px;
 			border-radius: 5px;
 		}
 	}
@@ -115,29 +125,26 @@
 
 @media only screen and (min-width : 992px) {
 	.nav_custom {
-		padding: 15px 0 15px 0;
+		padding: 10px 0 10px 0;
 		border-radius: 0;
 		border: 0;
 		background-color: $color-gray;
 
 		.logo_custom {
-			color: $color-black;
-			font-size: 50px;
-			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			transition: background 0.3s linear 0s, color 0.3s linear 0s;
-		}
-
-			.logo_custom:hover {
-				color: $color-blue;
+			float: none;
+			padding: 0;
+			.logo_img_custom {
+				width: 100%;
+				display: inline-block;
 			}
+		}
 
 		.button_custom {
 			color: $color-gray;
 			background-color: $color-black;
-			font-size: 16px;
-			padding: 4.5px 10px;
-			margin: 13px 0 0 10px;
+			font-size: 19px;
+			padding: 10.5px 21px;
+			margin: 35px 0 0 10px;
 			border-radius: 5px;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -162,20 +169,16 @@
 		border-radius: 0;
 		border: 0;
 		background-color: $color-gray;
-		padding: 35px 0 35px 0;
+		padding: 10px 0 10px 0;
 
 		.logo_custom {
-			color: $color-black;
-			font-size: 70px;
-			font-family: $font-secondary;
-			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-			transition: background 0.3s linear 0s, color 0.3s linear 0s;
-		}
-
-			.logo_custom:hover {
-				color: $color-blue;
+			float: none;
+			padding: 0;
+			.logo_img_custom {
+				width: 100%;
+				display: inline-block;
 			}
+		}
 
 		.button_custom {
 			color: $color-gray;
@@ -184,7 +187,7 @@
 			background-color: $color-black;
 			border-radius: 5px;
 			padding: 10px 15px;
-			margin: 11px 0 0 10px;
+			margin: 38px 0 0 10px;
 			-o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			-ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
 			transition: background 0.3s linear 0s, color 0.3s linear 0s;

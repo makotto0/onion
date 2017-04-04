@@ -55,7 +55,7 @@ var main_password = '';
 
 
 $("#step_one_next").click(function(){
-    console.log(main_countries);
+    // console.log(main_countries);
 //triger za da nemozis da kliknis poke od ednas na btno
     if(animating) return false;
     animating = true;

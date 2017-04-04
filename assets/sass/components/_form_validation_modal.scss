@@ -1,3 +1,98 @@
+/*====================================================================
+============ Bootstrap 3 Media Queries for SLIDESHOW =================
+====================================================================*/
+
+
+/*==================================================
+============== Mobile First Method =================
+=              Custom, iPhone Retina
+==================================================*/
+
+
+
+@media only screen and (min-width : 320px) {
+  .user_first_name {
+    font-size: 40px;
+    margin-right: 0;
+  }
+
+  .user_last_name {
+    font-size: 40px;
+    padding: 0;
+  }
+}
+
+
+/*==================================================
+=       Extra Small Devices, Portrait Phones       =
+==================================================*/
+
+
+@media only screen and (min-width : 480px) {
+  .user_first_name {
+    font-size: 40px;
+    margin-right: 0;
+  }
+
+  .user_last_name {
+    font-size: 40px;
+    padding: 0;
+  }
+}
+
+
+/*=================================================================================
+= Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
+=================================================================================*/
+
+
+@media only screen and (min-width : 768px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px;
+  }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0;
+  }
+}
+
+
+/*======================================================
+= Medium Devices, Landscape Tablets, Laptops, Desktops =
+======================================================*/
+
+
+@media only screen and (min-width : 992px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px;
+  }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0;
+  }
+}
+
+/*==================================================
+=   Large Devices, Large Desktops, Wide Screens    =
+==================================================*/
+
+
+@media only screen and (min-width : 1200px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px;
+  }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0;
+  }
+}
+
 .modal-content {
   color: $color-black;
   background-color: $color-blue;
@@ -30,17 +125,13 @@
   }
 
   .user_first_name {
-    font-size: 45px;
-    margin-right: 10px;
     display: inline;
     color: $color-blue;
   }
 
   .user_last_name {
-    font-size: 45px;
     display: inline;
     color: $color-blue;
-    padding: 10px 0 10px 0;
   }
 
   .user_phone,
@@ -50,7 +141,7 @@
     font-size: 20px;
     text-align: left;
     color: $color-blue;
-    padding: 10px 0 10px 0;
+    padding: 0;
   }
 
 }

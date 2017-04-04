@@ -5857,14 +5857,16 @@ blockquote {
     background-color: #a3a1a1;
     text-align: right; }
     .nav_custom .toggle_button_custom {
+      margin-top: 16px;
       border: #333 2px solid;
       background-color: #333; }
       .nav_custom .toggle_button_custom .toggle_icon_custom {
         border: #a3a1a1 1px solid; }
     .nav_custom .logo_custom {
-      color: #333;
-      font-size: 30px;
-      font-family: "Monoton", cursive; }
+      float: none; }
+      .nav_custom .logo_custom .logo_img_custom {
+        width: 75%;
+        display: inline-block; }
     .nav_custom .button_custom {
       color: #a3a1a1;
       background-color: #333;
@@ -5883,8 +5885,11 @@ blockquote {
     border: 0;
     background-color: #a3a1a1; }
     .nav_custom .logo_custom {
-      color: #333;
-      font-weight: bold; }
+      float: none;
+      padding: 0; }
+      .nav_custom .logo_custom .logo_img_custom {
+        width: 75%;
+        display: inline-block; }
     .nav_custom .button_custom {
       color: #a3a1a1;
       background-color: #333;
@@ -5902,37 +5907,40 @@ blockquote {
     border: 0;
     background-color: #a3a1a1; }
     .nav_custom .logo_custom {
-      color: #333; }
+      float: left;
+      padding: 0; }
+      .nav_custom .logo_custom .logo_img_custom {
+        width: 80%;
+        float: left;
+        display: inline-block; }
     .nav_custom .button_custom {
       color: #a3a1a1;
       background-color: #333;
       font-size: 16px;
-      padding: 4.5px 10px;
-      margin: 13px 0 0 10px;
+      padding: 5.5px 4px;
+      margin: 33px 0 0 10px;
       border-radius: 5px; } }
 /*======================================================
 = Medium Devices, Landscape Tablets, Laptops, Desktops =
 ======================================================*/
 @media only screen and (min-width: 992px) {
   .nav_custom {
-    padding: 15px 0 15px 0;
+    padding: 10px 0 10px 0;
     border-radius: 0;
     border: 0;
     background-color: #a3a1a1; }
     .nav_custom .logo_custom {
-      color: #333;
-      font-size: 50px;
-      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      transition: background 0.3s linear 0s, color 0.3s linear 0s; }
-    .nav_custom .logo_custom:hover {
-      color: #3795b3; }
+      float: none;
+      padding: 0; }
+      .nav_custom .logo_custom .logo_img_custom {
+        width: 100%;
+        display: inline-block; }
     .nav_custom .button_custom {
       color: #a3a1a1;
       background-color: #333;
-      font-size: 16px;
-      padding: 4.5px 10px;
-      margin: 13px 0 0 10px;
+      font-size: 19px;
+      padding: 10.5px 21px;
+      margin: 35px 0 0 10px;
       border-radius: 5px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -5948,16 +5956,13 @@ blockquote {
     border-radius: 0;
     border: 0;
     background-color: #a3a1a1;
-    padding: 35px 0 35px 0; }
+    padding: 10px 0 10px 0; }
     .nav_custom .logo_custom {
-      color: #333;
-      font-size: 70px;
-      font-family: "Monoton", cursive;
-      -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
-      transition: background 0.3s linear 0s, color 0.3s linear 0s; }
-    .nav_custom .logo_custom:hover {
-      color: #3795b3; }
+      float: none;
+      padding: 0; }
+      .nav_custom .logo_custom .logo_img_custom {
+        width: 100%;
+        display: inline-block; }
     .nav_custom .button_custom {
       color: #a3a1a1;
       font-size: 18px;
@@ -5965,7 +5970,7 @@ blockquote {
       background-color: #333;
       border-radius: 5px;
       padding: 10px 15px;
-      margin: 11px 0 0 10px;
+      margin: 38px 0 0 10px;
       -o-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s;
       transition: background 0.3s linear 0s, color 0.3s linear 0s; }
@@ -6031,9 +6036,7 @@ blockquote {
     to {
       opacity: 1; } }
     .slideshow_con_custom .slideshow_img_custom {
-      border-radius: 7px;
-      -webkit-filter: invert(0.8);
-      filter: invert(0.8); }
+      border-radius: 7px; }
 
   .dot_con_custom {
     text-align: center; }
@@ -6103,9 +6106,7 @@ blockquote {
     to {
       opacity: 1; } }
     .slideshow_con_custom .slideshow_img_custom {
-      border-radius: 7px;
-      -webkit-filter: invert(0.8);
-      filter: invert(0.8); }
+      border-radius: 7px; }
 
   .dot_con_custom {
     text-align: center; }
@@ -6181,9 +6182,7 @@ blockquote {
     to {
       opacity: 1; } }
     .slideshow_con_custom .slideshow_img_custom {
-      border-radius: 7px;
-      -webkit-filter: invert(0.8);
-      filter: invert(0.8); }
+      border-radius: 7px; }
 
   .dot_con_custom {
     text-align: center; }
@@ -6259,9 +6258,7 @@ blockquote {
     to {
       opacity: 1; } }
     .slideshow_con_custom .slideshow_img_custom {
-      border-radius: 7px;
-      -webkit-filter: invert(0.8);
-      filter: invert(0.8); }
+      border-radius: 7px; }
 
   .dot_con_custom {
     text-align: center; }
@@ -7190,6 +7187,65 @@ blockquote {
   padding: 0 0 5px 0px;
   display: block; }
 
+/*====================================================================
+============ Bootstrap 3 Media Queries for SLIDESHOW =================
+====================================================================*/
+/*==================================================
+============== Mobile First Method =================
+=              Custom, iPhone Retina
+==================================================*/
+@media only screen and (min-width: 320px) {
+  .user_first_name {
+    font-size: 40px;
+    margin-right: 0; }
+
+  .user_last_name {
+    font-size: 40px;
+    padding: 0; } }
+/*==================================================
+=       Extra Small Devices, Portrait Phones       =
+==================================================*/
+@media only screen and (min-width: 480px) {
+  .user_first_name {
+    font-size: 40px;
+    margin-right: 0; }
+
+  .user_last_name {
+    font-size: 40px;
+    padding: 0; } }
+/*=================================================================================
+= Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
+=================================================================================*/
+@media only screen and (min-width: 768px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px; }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0; } }
+/*======================================================
+= Medium Devices, Landscape Tablets, Laptops, Desktops =
+======================================================*/
+@media only screen and (min-width: 992px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px; }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0; } }
+/*==================================================
+=   Large Devices, Large Desktops, Wide Screens    =
+==================================================*/
+@media only screen and (min-width: 1200px) {
+  .user_first_name {
+    font-size: 45px;
+    margin-right: 10px; }
+
+  .user_last_name {
+    font-size: 45px;
+    padding: 10px 0 10px 0; } }
 .modal-content {
   color: #333;
   background-color: #3795b3; }
@@ -7210,15 +7266,11 @@ blockquote {
     font-size: 25px;
     padding: 10px 0 10px 0; }
   .modal-body .user_first_name {
-    font-size: 45px;
-    margin-right: 10px;
     display: inline;
     color: #3795b3; }
   .modal-body .user_last_name {
-    font-size: 45px;
     display: inline;
-    color: #3795b3;
-    padding: 10px 0 10px 0; }
+    color: #3795b3; }
   .modal-body .user_phone,
   .modal-body .user_address,
   .modal-body .user_email,
@@ -7226,7 +7278,7 @@ blockquote {
     font-size: 20px;
     text-align: left;
     color: #3795b3;
-    padding: 10px 0 10px 0; }
+    padding: 0; }
 
 .modal-footer {
   background-color: #3795b3;
