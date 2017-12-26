@@ -1,5 +1,5 @@
 /*====================================================================
-============ Bootstrap 3 Media Queries for SLIDESHOW =================
+===================== Bootstrap 3 Media Queries ======================
 ====================================================================*/
 
 
@@ -7,8 +7,6 @@
 ============== Mobile First Method =================
 =              Custom, iPhone Retina
 ==================================================*/
-
-
 
 @media only screen and (min-width : 320px) {
 	.slideshow_con_custom {
@@ -100,11 +98,9 @@
 	}
 }
 
-
 /*==================================================
 =       Extra Small Devices, Portrait Phones       =
 ==================================================*/
-
 
 @media only screen and (min-width : 480px) {
 	.slideshow_con_custom {
@@ -194,11 +190,9 @@
     }
 }
 
-
 /*=================================================================================
 = Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
 =================================================================================*/
-
 
 @media only screen and (min-width : 768px) {
     .slideshow_con_custom {
@@ -299,11 +293,9 @@
 
 }
 
-
 /*======================================================
 = Medium Devices, Landscape Tablets, Laptops, Desktops =
 ======================================================*/
-
 
 @media only screen and (min-width : 992px) {
 
@@ -406,11 +398,9 @@
 
 }
 
-
 /*==================================================
 =   Large Devices, Large Desktops, Wide Screens    =
 ==================================================*/
-
 
 @media only screen and (min-width : 1200px) {
 
@@ -514,8 +504,3 @@
 			    }
 	}
 }
-
-
-
-
-

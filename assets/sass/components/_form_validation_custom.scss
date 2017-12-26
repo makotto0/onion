@@ -1,4 +1,3 @@
-
 /*====================================================================
 ============ Bootstrap 3 Media Queries for FORM VALIDATION ===========
 ====================================================================*/
@@ -8,8 +7,6 @@
 ============== Mobile First Method =================
 =              Custom, iPhone Retina
 ==================================================*/
-
-
 
 @media only screen and (min-width : 320px) {
   #msform {
@@ -148,11 +145,9 @@
   }
 }
 
-
 /*==================================================
 =       Extra Small Devices, Portrait Phones       =
 ==================================================*/
-
 
 @media only screen and (min-width : 480px) {
   #msform {
@@ -294,11 +289,9 @@
   }
 }
 
-
 /*=================================================================================
 = Small Devices, Landscape Phones and Phablets, Portrait Tablets, Small Desktops =
 =================================================================================*/
-
 
 @media only screen and (min-width : 768px) {
 
@@ -444,11 +437,9 @@
 
 }
 
-
 /*======================================================
 = Medium Devices, Landscape Tablets, Laptops, Desktops =
 ======================================================*/
-
 
 @media only screen and (min-width : 992px) {
   #msform {
@@ -624,11 +615,9 @@
 
 }
 
-
 /*==================================================
 =   Large Devices, Large Desktops, Wide Screens    =
 ==================================================*/
-
 
 @media only screen and (min-width : 1200px) {
   #msform {
@@ -813,8 +802,3 @@
   }
 
 }
-
-
-
-
-
